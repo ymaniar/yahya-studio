@@ -123,8 +123,11 @@
   .menu-section{background:linear-gradient(180deg,rgba(239,226,207,.72),rgba(251,247,239,.96));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .menu-head{width:min(100%,1180px);margin:0 auto clamp(2.2rem,5vw,4rem);display:flex;align-items:end;justify-content:space-between;gap:2rem}
   .menu-head h2{margin-top:.65rem;font-size:clamp(2.9rem,6.8vw,6.8rem);color:var(--ink)}
-  .menu-categories{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem;max-width:620px}
-  .menu-tab{appearance:none;border:1px solid rgba(25,18,13,.14);border-radius:999px;background:rgba(255,252,246,.7);color:var(--ink-2);cursor:pointer;padding:.78rem 1rem;font:800 .68rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .menu-section .menu-head{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:1.6rem}
+  .menu-note{max-width:34rem;font-style:italic;color:var(--muted);font-size:.92rem;line-height:1.6}
+  .menu-categories{display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:.6rem;max-width:100%;overflow-x:auto;padding-bottom:.35rem;scrollbar-width:none}
+  .menu-categories::-webkit-scrollbar{display:none}
+  .menu-tab{appearance:none;flex:0 0 auto;white-space:nowrap;border:1px solid rgba(25,18,13,.14);border-radius:999px;background:rgba(255,252,246,.7);color:var(--ink-2);cursor:pointer;padding:.72rem .95rem;font:800 .66rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease}
   .menu-tab:hover{transform:translateY(-2px);border-color:rgba(185,98,50,.38);box-shadow:0 12px 28px rgba(45,31,20,.08)}
   .menu-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .menu-panel{display:none;width:min(100%,1180px);margin:0 auto;animation:panelIn .45s ease both}
@@ -196,7 +199,7 @@
     body{font-size:15px}.marquee-track{animation-duration:24s}.hero-content{padding:clamp(1.75rem,7vw,2.5rem) 1.2rem 3.25rem}.hero h1{font-size:clamp(3rem,14.4vw,4.25rem);line-height:.98;max-width:8.6ch}
     .hero .sub{max-width:100%;font-size:.98rem;line-height:1.65}.hero-bottom,.hero-actions{width:100%;max-width:100%;min-width:0}.hero-bottom{margin-top:1rem;padding-top:1rem}.hero-actions{display:grid}.hero .btn{width:100%;min-width:0;white-space:normal}.statement{width:min(100% - 1.5rem,820px)}.meta-strip{width:min(100% - 1.5rem,1180px)}
     .meta-strip{grid-template-columns:1fr}.meta-cell{border-right:0;border-bottom:1px solid var(--line)}.meta-cell:last-child{border-bottom:0}
-    .menu-section,.gallery-section,.testimonial-section,.visit-section,.story{padding-left:.9rem;padding-right:.9rem}.menu-tab{flex:1 1 auto}.dish{grid-template-columns:1fr;gap:.8rem}.desc{margin-left:0}.price{justify-self:start}
+    .menu-section,.gallery-section,.testimonial-section,.visit-section,.story{padding-left:.9rem;padding-right:.9rem}.dish{grid-template-columns:1fr;gap:.8rem}.desc{margin-left:0}.price{justify-self:start}
     .gallery-grid{grid-template-columns:1fr;grid-auto-rows:260px}.ga{grid-column:auto}.story-img,.map-wrap,.map-wrap iframe{min-height:330px}.row{font-size:1.12rem}
   }
   @media (prefers-reduced-motion:reduce){
@@ -275,47 +278,83 @@
   <div class="menu-head reveal">
     <div>
       <div class="eyebrow">AU MENU</div>
-      <h2>Matin & soir</h2>
+      <h2>Sélection du menu</h2>
+      <p class="menu-note">Sélection issue du menu Luckin Café. Menu complet disponible sur place.</p>
     </div>
     <div class="menu-categories">
-      <button class="menu-tab active" data-tab="petitdej">Petits Déjeuners</button>
-      <button class="menu-tab" data-tab="plats">Plats & Sandwichs</button>
-      <button class="menu-tab" data-tab="pizza">Pizzas & Sushi</button>
-      <button class="menu-tab" data-tab="boissons">Cafés & Boissons</button>
+      <button class="menu-tab active" data-tab="petitdej">Petit déjeuner</button>
+      <button class="menu-tab" data-tab="alacarte">À la carte</button>
+      <button class="menu-tab" data-tab="boissons">Boissons</button>
+      <button class="menu-tab" data-tab="snacking">Snacking</button>
+      <button class="menu-tab" data-tab="plats">Plats & pâtes</button>
+      <button class="menu-tab" data-tab="sucre">Sucré</button>
+      <button class="menu-tab" data-tab="sushi">Sushi</button>
     </div>
   </div>
 
   <div class="reveal">
     <div class="menu-panel active" id="petitdej">
       <div class="menu-row-grid">
-        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Petit Déjeuner Complet</span><div class="desc">Omelette, viennoiserie, jus frais, café</div></div><div class="price">45 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Omelette Nature</span><div class="desc">Servie avec pain frais</div></div><div class="price">25 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Pain & Confiture</span><div class="desc">Beurre, miel, confiture maison</div></div><div class="price">18 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Crêpes Chocolat-Banane</span><div class="desc">Notre dessert signature du matin</div></div><div class="price">28 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Express</span><div class="desc">Viennoiseries ou pain grillé avec accompagnement, boisson chaude, jus d'orange</div></div><div class="price">32 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Beldi</span><div class="desc">Tagine œufs et tomates marinées ou assortiment de msemen, batbout, harcha, olives noires, boisson chaude, jus d'orange, yaourts aux fruits</div></div><div class="price">39 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Chamali</span><div class="desc">Œufs plats, jambon, jben, olives noires, boisson chaude, jus d'orange, yaourts aux fruits</div></div><div class="price">42 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Fassi</span><div class="desc">Tagine khlii, olives noires, boisson chaude, jus d'orange, yaourts aux fruits</div></div><div class="price">45 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Luckin</span><div class="desc">Toast avocat œuf, tartine au saumon fumé fromage, boisson chaude, jus d'orange, muesli aux fruits ou salade de fruits</div></div><div class="price">70 MAD</div></div>
       </div>
     </div>
-    <div class="menu-panel" id="plats">
+    <div class="menu-panel" id="alacarte">
       <div class="menu-row-grid">
-        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Sandwich Poulet Grillé</span><div class="desc">Crudités, sauce maison, frites</div></div><div class="price">35 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Club Sandwich</span><div class="desc">Dinde, fromage, œuf, frites</div></div><div class="price">38 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Burger Luckin</span><div class="desc">Steak, cheddar, sauce signature</div></div><div class="price">42 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Salade César</span><div class="desc">Poulet, parmesan, croûtons</div></div><div class="price">36 MAD</div></div>
-      </div>
-    </div>
-    <div class="menu-panel" id="pizza">
-      <div class="menu-row-grid">
-        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Pizza Margherita</span><div class="desc">Tomate, mozzarella, basilic</div></div><div class="price">45 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Pizza Quatre Fromages</span><div class="desc">Mozzarella, chèvre, gorgonzola, parmesan</div></div><div class="price">55 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Sushi by Luckin — 24 pièces</span><div class="desc">Saumon, thon, avocat, california</div></div><div class="price">215 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Sushi by Luckin — 12 pièces</span><div class="desc">Sélection du chef</div></div><div class="price">120 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Omelette Khlii</span></div><div class="price">35 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Croque Fromage, Dinde Fumée</span></div><div class="price">30 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Assortiment Msemen, Harcha, Baghrir</span></div><div class="price">15 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Assortiment de Charcuterie et Fromage</span></div><div class="price">22 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Soupe de Poisson</span></div><div class="price">30 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">06</span><span class="name">Omelette Fromage</span></div><div class="price">19 MAD</div></div>
       </div>
     </div>
     <div class="menu-panel" id="boissons">
       <div class="menu-row-grid">
-        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Cappuccino</span><div class="desc">Espresso, lait mousseux</div></div><div class="price">16 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Café au Lait</span><div class="desc">Servi chaud ou glacé</div></div><div class="price">15 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Jus d'Orange Frais</span><div class="desc">Pressé à la commande</div></div><div class="price">20 MAD</div></div>
-        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Cocktail de Fruits</span><div class="desc">Mélange frais de saison</div></div><div class="price">24 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Espresso</span></div><div class="price">13 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Café Crème</span></div><div class="price">14 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Thé Marocain</span></div><div class="price">14 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Cappuccino</span></div><div class="price">16 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Jus d'Orange</span></div><div class="price">17 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">06</span><span class="name">Smoothie Mangue</span><div class="desc">Boule mangue, orange, yaourt, mangue</div></div><div class="price">35 MAD</div></div>
+      </div>
+    </div>
+    <div class="menu-panel" id="snacking">
+      <div class="menu-row-grid">
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Sandwich Poulet</span><div class="desc">Poulet, laitue, tomate, fromage, sauce</div></div><div class="price">35 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Panini Viande Hachée</span><div class="desc">Sauce pesto, viande hachée, mozzarella, fromage rouge</div></div><div class="price">37 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Tacos Poulet</span><div class="desc">Poulet, frites, mozzarella, cheddar, sauce</div></div><div class="price">40 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Quesadillas Poulet</span><div class="desc">Poulet, poivron, guacamole, fromage, oignons</div></div><div class="price">45 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Burger Royal</span><div class="desc">Viande hachée, jambon, cheddar, œuf, salade, sauce</div></div><div class="price">55 MAD</div></div>
+      </div>
+    </div>
+    <div class="menu-panel" id="plats">
+      <div class="menu-row-grid">
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Pâtes Carbonara</span><div class="desc">Pâtes au choix, jambon fumé, jaune d'œuf, crème fraîche, mozzarella</div></div><div class="price">45 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Lasagne Bolognaise</span><div class="desc">Viande hachée, mozzarella, sauce tomate</div></div><div class="price">45 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Brochette de Poulet</span><div class="desc">Brochette de poulet, salade, frites</div></div><div class="price">50 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Tagine Poulet</span><div class="desc">Tagine de poulet aux citrons confits et olives</div></div><div class="price">50 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Paella</span><div class="desc">Crevettes, poulet, moules, poivron, riz</div></div><div class="price">60 MAD</div></div>
+      </div>
+    </div>
+    <div class="menu-panel" id="sucre">
+      <div class="menu-row-grid">
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Crêpe Nutella Banane</span></div><div class="price">28 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">Tiramisu Oreo</span><div class="desc">Oreo, crème chantilly</div></div><div class="price">25 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Chocolat Liégeois</span><div class="desc">Boule vanille, boule chocolat, crème chantilly</div></div><div class="price">45 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Banana Split</span><div class="desc">Boule fraise, boule vanille, boule chocolat, banane</div></div><div class="price">57 MAD</div></div>
+      </div>
+    </div>
+    <div class="menu-panel" id="sushi">
+      <div class="menu-row-grid">
+        <div class="dish"><div class="left"><span class="num">01</span><span class="name">Nigiri Saumon</span><div class="desc">2 pièces</div></div><div class="price">30 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">02</span><span class="name">California Sésame</span><div class="desc">Saumon, avocat, sésame</div></div><div class="price">35 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">03</span><span class="name">Sashimi Saumon</span><div class="desc">4 pièces</div></div><div class="price">40 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">04</span><span class="name">Crunchy Maki Cheese</span><div class="desc">Saumon, cheese, tobiko — 6 pièces</div></div><div class="price">50 MAD</div></div>
+        <div class="dish"><div class="left"><span class="num">05</span><span class="name">Tartare Saumon</span><div class="desc">Saumon, avocat, riz, tobiko, goma wakame</div></div><div class="price">60 MAD</div></div>
       </div>
     </div>
   </div>
