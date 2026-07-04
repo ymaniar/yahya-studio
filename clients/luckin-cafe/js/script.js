@@ -1,18 +1,40 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  document.querySelectorAll('.menu-tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const panel = document.getElementById(tab.dataset.tab);
-      if (!panel || tab.classList.contains('active')) return;
-      document.querySelectorAll('.menu-tab').forEach((item) => {
-        item.classList.remove('active');
-        item.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll('.menu-panel').forEach((item) => item.classList.remove('active'));
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      panel.classList.add('active');
+  const menuTabs = Array.from(document.querySelectorAll('.menu-tab'));
+
+  function activateTab(tab) {
+    const panel = document.getElementById(tab.dataset.tab);
+    if (!panel || tab.classList.contains('active')) return;
+    menuTabs.forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-selected', 'false');
+      item.setAttribute('tabindex', '-1');
+    });
+    document.querySelectorAll('.menu-panel').forEach((item) => item.classList.remove('active'));
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
+    panel.classList.add('active');
+  }
+
+  menuTabs.forEach((tab) => {
+    tab.addEventListener('click', () => activateTab(tab));
+
+    tab.addEventListener('keydown', (event) => {
+      const currentIndex = menuTabs.indexOf(tab);
+      let targetIndex = null;
+      if (event.key === 'ArrowRight') targetIndex = (currentIndex + 1) % menuTabs.length;
+      else if (event.key === 'ArrowLeft') targetIndex = (currentIndex - 1 + menuTabs.length) % menuTabs.length;
+      else if (event.key === 'Home') targetIndex = 0;
+      else if (event.key === 'End') targetIndex = menuTabs.length - 1;
+
+      if (targetIndex !== null) {
+        event.preventDefault();
+        const targetTab = menuTabs[targetIndex];
+        activateTab(targetTab);
+        targetTab.focus();
+      }
     });
   });
 

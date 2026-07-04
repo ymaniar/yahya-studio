@@ -16,6 +16,7 @@
 <meta name="twitter:description" content="Une terrasse de 200 m², un menu du matin au soir, dans une ambiance calme au cœur de Targa, Marrakech.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/animations.css">
+<link rel="icon" type="image/png" href="images/luckin-logo.png">
 </head>
 <body>
 
@@ -30,7 +31,7 @@
 
 <header>
   <div class="nav-wrap">
-    <div class="logo"><img src="images/luckin-logo.png" alt="Luckin Café" style="height:42px;display:block;"></div>
+    <div class="logo"><img src="images/luckin-logo.png" alt="Luckin Café"></div>
     <nav>
       <ul>
         <li><a href="#menu">Menu</a></li>
@@ -92,13 +93,13 @@
       <p class="menu-note">Sélection issue du menu Luckin Café. Menu complet disponible sur place.</p>
     </div>
     <div class="menu-categories" role="tablist" aria-label="Catégories du menu">
-      <button class="menu-tab active" id="tab-petitdej" role="tab" aria-selected="true" aria-controls="petitdej" data-tab="petitdej" type="button">Petit déjeuner</button>
-      <button class="menu-tab" id="tab-alacarte" role="tab" aria-selected="false" aria-controls="alacarte" data-tab="alacarte" type="button">À la carte</button>
-      <button class="menu-tab" id="tab-boissons" role="tab" aria-selected="false" aria-controls="boissons" data-tab="boissons" type="button">Boissons</button>
-      <button class="menu-tab" id="tab-snacking" role="tab" aria-selected="false" aria-controls="snacking" data-tab="snacking" type="button">Snacking</button>
-      <button class="menu-tab" id="tab-plats" role="tab" aria-selected="false" aria-controls="plats" data-tab="plats" type="button">Plats & pâtes</button>
-      <button class="menu-tab" id="tab-sucre" role="tab" aria-selected="false" aria-controls="sucre" data-tab="sucre" type="button">Sucré</button>
-      <button class="menu-tab" id="tab-sushi" role="tab" aria-selected="false" aria-controls="sushi" data-tab="sushi" type="button">Sushi</button>
+      <button class="menu-tab active" id="tab-petitdej" role="tab" aria-selected="true" aria-controls="petitdej" data-tab="petitdej" type="button" tabindex="0">Petit déjeuner</button>
+      <button class="menu-tab" id="tab-alacarte" role="tab" aria-selected="false" aria-controls="alacarte" data-tab="alacarte" type="button" tabindex="-1">À la carte</button>
+      <button class="menu-tab" id="tab-boissons" role="tab" aria-selected="false" aria-controls="boissons" data-tab="boissons" type="button" tabindex="-1">Boissons</button>
+      <button class="menu-tab" id="tab-snacking" role="tab" aria-selected="false" aria-controls="snacking" data-tab="snacking" type="button" tabindex="-1">Snacking</button>
+      <button class="menu-tab" id="tab-plats" role="tab" aria-selected="false" aria-controls="plats" data-tab="plats" type="button" tabindex="-1">Plats & pâtes</button>
+      <button class="menu-tab" id="tab-sucre" role="tab" aria-selected="false" aria-controls="sucre" data-tab="sucre" type="button" tabindex="-1">Sucré</button>
+      <button class="menu-tab" id="tab-sushi" role="tab" aria-selected="false" aria-controls="sushi" data-tab="sushi" type="button" tabindex="-1">Sushi</button>
     </div>
   </div>
 
@@ -205,17 +206,17 @@
   </div>
   <div class="testimonial-grid">
     <div class="testimonial">
-      <div class="stars">★★★★★</div>
+      <div class="stars" role="img" aria-label="5 sur 5 étoiles">★★★★★</div>
       <p class="quote">Une expérience formidable dans ce café, l'ambiance est calme et le service excellent.</p>
       <div class="who">Avis Google</div>
     </div>
     <div class="testimonial">
-      <div class="stars">★★★★★</div>
+      <div class="stars" role="img" aria-label="5 sur 5 étoiles">★★★★★</div>
       <p class="quote">L'espresso était délicieux, je recommande aussi les pâtisseries.</p>
       <div class="who">Avis Google</div>
     </div>
     <div class="testimonial">
-      <div class="stars">★★★★☆</div>
+      <div class="stars" role="img" aria-label="4 sur 5 étoiles">★★★★☆</div>
       <p class="quote">Belle terrasse, parfait pour un petit déjeuner tranquille à Targa.</p>
       <div class="who">Avis Google</div>
     </div>
@@ -252,7 +253,7 @@
 </section>
 
 <footer>
-  <div class="logo"><img src="images/luckin-logo.png" alt="Luckin Café" style="height:36px;display:block;margin:0 auto 0.8rem;"></div>
+  <div class="logo"><img src="images/luckin-logo.png" alt="Luckin Café"></div>
   <div>Jawhar, Targa, Marrakech</div>
   <div class="note">Concept de site web proposé pour Luckin Café — une vision possible de leur présence en ligne.</div>
 </footer>

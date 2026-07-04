@@ -193,7 +193,7 @@
   footer .logo{justify-content:center;margin-bottom:1.6rem}
   footer .logo img{height:42px!important;margin:0 auto!important;filter:brightness(1.08)}
   footer>div:not(.logo){font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-  footer .note{position:relative;margin:1.6rem auto 0;padding-top:1.4rem;max-width:30rem;color:rgba(251,247,239,.46);font-size:.72rem;letter-spacing:.06em;text-transform:none;line-height:1.65}
+  footer .note{position:relative;margin:1.6rem auto 0;padding-top:1.4rem;max-width:30rem;color:rgba(251,247,239,.48);font-size:.72rem;letter-spacing:.06em;text-transform:none;line-height:1.65}
   footer .note::before{content:"";position:absolute;left:50%;top:0;width:2rem;height:1px;transform:translateX(-50%);background:rgba(251,247,239,.18)}
 
   @media (max-width:900px){
