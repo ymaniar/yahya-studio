@@ -1,0 +1,14 @@
+/* Scroll-reveal system, keyframes, and reduced-motion behavior. */
+
+.reveal,.reveal-l,.reveal-r{opacity:0;transition:opacity .9s cubic-bezier(.2,.65,.2,1),transform .9s cubic-bezier(.2,.65,.2,1)}
+.reveal{transform:translateY(34px)}
+.reveal-l{transform:translateX(-34px)}
+.reveal-r{transform:translateX(34px)}
+.reveal.in,.reveal-l.in,.reveal-r.in{opacity:1;transform:none}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes heroScrollCue{0%{top:-100%}60%,100%{top:100%}}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.reveal,.reveal-l,.reveal-r{opacity:1;transform:none}.hero-bg{transform:none!important}.hero .hero-eyebrow,.hero h1,.hero .sub,.hero .hero-actions{opacity:1;transform:none}
+  }
