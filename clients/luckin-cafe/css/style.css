@@ -209,5 +209,5 @@
     .hero .sub{max-width:100%;font-size:.98rem;line-height:1.65}.hero-bottom,.hero-actions{width:100%;max-width:100%;min-width:0}.hero-bottom{margin-top:1rem;padding-top:1rem}.hero-actions{display:grid}.hero .btn{width:100%;min-width:0;white-space:normal}.statement{width:min(100% - 1.5rem,820px)}.meta-strip{width:min(100% - 1.5rem,1180px)}
     .meta-strip{grid-template-columns:1fr}.meta-cell{border-right:0;border-bottom:1px solid var(--line)}.meta-cell:last-child{border-bottom:0}
     .menu-section,.gallery-section,.testimonial-section,.visit-section,.story{padding-left:.9rem;padding-right:.9rem}.dish{grid-template-columns:1fr;gap:.8rem}.desc{margin-left:0}.price{justify-self:start}
-    .gallery-grid{grid-template-columns:1fr;gap:1.25rem}.gallery-grid figure:nth-child(2n){margin-top:0}.story-img,.map-wrap,.map-wrap iframe{min-height:330px}.story-text h2{font-size:clamp(2.3rem,10vw,3rem)}.row{font-size:1.12rem}
+    .gallery-grid{grid-template-columns:1fr;gap:1.25rem}.gallery-grid figure:nth-child(2n){margin-top:0}.gallery-grid figure{height:auto}.gallery-grid img{height:auto;max-height:55vh;object-fit:contain}.story-img,.map-wrap,.map-wrap iframe{min-height:330px}.story-text h2{font-size:clamp(2.3rem,10vw,3rem)}.row{font-size:1.12rem}
   }
