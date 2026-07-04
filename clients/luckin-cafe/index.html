@@ -176,14 +176,19 @@
   .who{font-size:.68rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 
   .visit-section{background:var(--paper)}
-  .visit-grid{display:grid;grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr);gap:clamp(1.2rem,3vw,2rem);align-items:stretch}
+  .visit-section .menu-head{margin-bottom:clamp(1.75rem,4vw,2.75rem)}
+  .visit-section .menu-head h2{font-size:clamp(2.1rem,4.2vw,3.2rem);margin-top:.5rem}
+  .visit-grid{display:grid;grid-template-columns:minmax(280px,.78fr) minmax(0,1.22fr);gap:clamp(1.75rem,4vw,3rem);align-items:stretch}
   .visit-info{display:grid;gap:1px;background:rgba(25,18,13,.14);border:1px solid rgba(25,18,13,.14)}
   .block{background:rgba(255,252,246,.76);padding:clamp(1.4rem,3vw,2.2rem)}
+  .visit-info .label{margin-bottom:.6rem}
   .row{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(25,18,13,.1);font-family:var(--serif);font-size:1.28rem;line-height:1.25}
   .row:last-child{border-bottom:0}
   address{margin:1rem 0;font-style:normal;font-family:var(--serif);font-size:1.45rem;line-height:1.3}
   .block p{color:var(--muted);margin-top:.35rem}.ig{color:var(--copper-deep);font-weight:800}
-  .map-wrap{min-height:460px;overflow:hidden;background:var(--linen);box-shadow:var(--shadow)}
+  .tel{color:var(--copper-deep);font-weight:700;transition:color .25s ease}
+  .tel:hover{color:var(--ink)}
+  .map-wrap{position:relative;min-height:460px;overflow:hidden;background:var(--linen);box-shadow:var(--shadow),inset 0 0 0 1px rgba(25,18,13,.08)}
   .map-wrap iframe{width:100%;height:100%;min-height:460px;border:0;filter:saturate(.78) contrast(1.02)}
 
   footer{position:relative;padding:clamp(3.5rem,7vw,6rem) 1.2rem;background:var(--ink);color:rgba(251,247,239,.72);text-align:center;overflow:hidden}
@@ -436,7 +441,7 @@
         <div class="block">
           <div class="label">Adresse</div>
           <address>Jawhar, Targa<br>Marrakech, Maroc</address>
-          <p>+212 5 24 49 77 55</p>
+          <p><a class="tel" href="tel:+212524497755">+212 5 24 49 77 55</a></p>
           <p><a class="ig" href="https://www.instagram.com/luckincafe/" target="_blank">@luckincafe</a></p>
         </div>
       </div>
