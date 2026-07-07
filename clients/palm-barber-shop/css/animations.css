@@ -62,7 +62,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .reveal.is-visible {
     opacity: 1;
     transform: none;
     animation: none;
