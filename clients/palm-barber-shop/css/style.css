@@ -441,8 +441,26 @@ button:focus-visible {
   padding: var(--space-6) 0;
 }
 
-.services-list {
+.services-group {
+  margin-top: var(--space-4);
+}
+
+.services-group:first-of-type {
   margin-top: var(--space-3);
+}
+
+.service-group-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+  margin: 0 0 var(--space-1);
+}
+
+.services-list {
+  margin-top: var(--space-1);
   border-top: 1px solid var(--color-border);
 }
 
