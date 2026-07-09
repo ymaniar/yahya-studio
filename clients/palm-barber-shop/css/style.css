@@ -3,10 +3,10 @@
    ========================================================================== */
 
 :root {
-  --color-bg: #0f0d0b;
-  --color-bg-alt: #17130f;
-  --color-surface: #1e1812;
-  --color-border: #322a20;
+  --color-bg: #140f0b;
+  --color-bg-alt: #1e160f;
+  --color-surface: #2a1f16;
+  --color-border: #3c2f22;
 
   --color-cream: #f3e9d7;
   --color-cream-dim: #cfc3ac;
@@ -18,6 +18,7 @@
 
   --container-width: 1120px;
   --radius: 4px;
+  --radius-lg: 8px;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -392,8 +393,13 @@ button:focus-visible {
 /* ---- Quick facts ---- */
 
 .quick-facts {
-  background: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    var(--color-bg-alt) 20%,
+    var(--color-bg-alt) 80%,
+    var(--color-bg) 100%
+  );
 }
 
 .quick-facts-strip {
@@ -438,11 +444,24 @@ button:focus-visible {
 /* ---- Services ---- */
 
 .services {
-  padding: var(--space-6) 0;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-4);
+  background:
+    radial-gradient(ellipse 60% 40% at 12% 8%, rgba(201, 162, 75, 0.05), transparent 65%),
+    linear-gradient(
+      to bottom,
+      var(--color-bg) 0%,
+      var(--color-bg) 80%,
+      var(--color-surface) 100%
+    );
 }
 
 .services-group {
   margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-3) var(--space-1);
+  background: var(--color-surface);
+  border: 1px solid rgba(201, 162, 75, 0.14);
+  border-radius: var(--radius-lg);
 }
 
 .services-group:first-of-type {
@@ -526,10 +545,16 @@ button:focus-visible {
 /* ---- Interior ---- */
 
 .interior {
-  padding: var(--space-6) 0;
-  background: var(--color-bg-alt);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-6);
+  background:
+    radial-gradient(ellipse 55% 45% at 22% 35%, rgba(201, 162, 75, 0.06), transparent 65%),
+    linear-gradient(
+      to bottom,
+      var(--color-surface) 0%,
+      var(--color-surface) 78%,
+      var(--color-bg) 100%
+    );
 }
 
 .interior-grid {
@@ -544,9 +569,9 @@ button:focus-visible {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 162, 75, 0.18);
+  box-shadow: 0 25px 50px -24px rgba(0, 0, 0, 0.55);
 }
 
 .interior-lead {
@@ -575,6 +600,12 @@ button:focus-visible {
 
 .gallery {
   padding: var(--space-6) 0;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    var(--color-bg) 80%,
+    var(--color-bg-alt) 100%
+  );
 }
 
 .gallery-grid {
@@ -588,9 +619,9 @@ button:focus-visible {
   position: relative;
   margin: 0;
   overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 162, 75, 0.18);
+  box-shadow: 0 25px 50px -24px rgba(0, 0, 0, 0.55);
 }
 
 .gallery-item img {
@@ -627,8 +658,14 @@ button:focus-visible {
 
 .contact {
   padding: var(--space-6) 0;
-  background: var(--color-bg-alt);
-  border-top: 1px solid var(--color-border);
+  background:
+    radial-gradient(ellipse 50% 50% at 50% 35%, rgba(201, 162, 75, 0.06), transparent 65%),
+    linear-gradient(
+      to bottom,
+      var(--color-bg-alt) 0%,
+      var(--color-bg-alt) 78%,
+      var(--color-bg) 100%
+    );
   text-align: center;
 }
 
@@ -637,9 +674,9 @@ button:focus-visible {
   max-width: 640px;
   padding: var(--space-5) var(--space-4);
   border: 1px solid var(--color-gold);
-  border-radius: var(--radius);
-  background: var(--color-surface);
-  box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.08), 0 30px 60px -30px rgba(201, 162, 75, 0.35);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, rgba(201, 162, 75, 0.08), transparent 55%), var(--color-surface);
+  box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.08), 0 30px 60px -30px rgba(201, 162, 75, 0.45);
 }
 
 .contact .btn {
@@ -669,7 +706,7 @@ button:focus-visible {
 
 .site-footer {
   padding: var(--space-4) 0;
-  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
   position: relative;
 }
 
