@@ -596,6 +596,11 @@ button:focus-visible {
   line-height: 1;
 }
 
+.interior-story {
+  max-width: 46ch;
+  font-size: 0.95rem;
+}
+
 /* ---- Gallery ---- */
 
 .gallery {
@@ -692,6 +697,22 @@ button:focus-visible {
   max-width: 48ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact-address {
+  margin: var(--space-3) 0 0;
+  font-size: 0.9rem;
+  color: var(--color-cream);
+}
+
+.contact-address-tag {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--color-gold);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
 }
 
 .contact-actions {
