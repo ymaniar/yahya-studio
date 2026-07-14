@@ -221,21 +221,12 @@ button:focus-visible {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.brand-mark {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-accent);
-}
-
-.brand-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--color-ink);
+.brand-logo {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .nav-toggle {
@@ -968,10 +959,11 @@ fieldset.form-field legend {
   text-align: center;
 }
 
-.footer-brand {
-  margin: 0 0 0.25rem;
-  font-weight: 700;
-  color: var(--color-ink);
+.footer-logo {
+  display: block;
+  height: 32px;
+  width: auto;
+  margin: 0 auto 0.4rem;
 }
 
 .footer-tagline {
