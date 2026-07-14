@@ -203,19 +203,38 @@
     if (prefersReducedMotion) {
       drawStatic();
     } else {
-      startAnimation();
+      var heroInView = true;
+      var tabVisible = !document.hidden;
+
+      function updateAnimationState() {
+        if (heroInView && tabVisible) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
+      }
+
+      updateAnimationState();
 
       if (interactive) {
         heroSection.addEventListener('mousemove', handleMouseMove);
         heroSection.addEventListener('mouseleave', handleMouseLeave);
       }
 
+      if ('IntersectionObserver' in window) {
+        var heroVisibilityObserver = new IntersectionObserver(
+          function (entries) {
+            heroInView = entries[0].isIntersecting;
+            updateAnimationState();
+          },
+          { threshold: 0 }
+        );
+        heroVisibilityObserver.observe(heroSection);
+      }
+
       document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-          stopAnimation();
-        } else {
-          startAnimation();
-        }
+        tabVisible = !document.hidden;
+        updateAnimationState();
       });
     }
 

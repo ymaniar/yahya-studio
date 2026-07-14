@@ -12,12 +12,12 @@
 
   --color-ink: #f2f4f8;
   --color-ink-dim: #99a2b3;
-  --color-ink-faint: #676f7f;
+  --color-ink-faint: #818897;
 
   --color-accent: #2dd4ee;
   --color-accent-2: #6d5efc;
   --color-accent-soft: rgba(45, 212, 238, 0.12);
-  --color-on-accent: #04070c;
+  --color-on-accent: #000000;
 
   --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
 

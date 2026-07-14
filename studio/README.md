@@ -13,7 +13,7 @@ studio/
 │   └── animations.css   # keyframes + reveal-on-scroll transitions
 ├── js/
 │   └── script.js        # mobile nav toggle + scroll-reveal (reduced-motion aware)
-├── images/               # project preview screenshots (luckin-cafe-preview.jpg, palm-barber-preview.jpg)
+├── images/               # logo, favicon mark, and project preview screenshots
 └── README.md
 ```
 
@@ -21,7 +21,7 @@ No framework, no build step — plain HTML/CSS/JS.
 
 ## Sections
 
-Hero, Selected Work (Luckin Café + Palm Barber Shop), Services, Process, Why a website matters, Contact form, Footer.
+Hero (with an interactive canvas starfield background), Selected Work (Luckin Café + Palm Barber Shop), Services & stack, Process, Why it matters, Contact form (Netlify Forms), Footer.
 
 ## Contact form (Netlify Forms)
 
@@ -44,9 +44,15 @@ Both are linked as live external sites only (`target="_blank"`); their source fi
 
 `images/luckin-cafe-preview.jpg` and `images/palm-barber-preview.jpg` are hero-section screenshots (1280×800) captured directly from the two live sites, used as the `<img>` thumbnails in the Selected Work cards. Both are `loading="lazy"` with explicit `width`/`height` to avoid layout shift.
 
-## Known placeholders (to replace later)
+## Branding assets
 
-- **Open Graph image**: no `og:image` is set yet since there's no real screenshot/brand image to point to.
+- **Logo**: `images/yahya-studio-logo.png` (1704×314 horizontal wordmark), used in the header (`loading="eager"`), the footer (`loading="lazy"`), and as the `og:image` for social link previews.
+- **Favicon**: `images/yahya-studio-mark.png` (459×459 square mark), referenced via `<link rel="icon" type="image/png">` in both `index.html` and `success.html`.
+- Both PNGs are palette-optimized (no visible quality loss) to keep the eagerly-loaded header asset lightweight.
+
+## Hero starfield
+
+The hero background (`#heroStarfield` canvas in `index.html`, logic in `js/script.js`) is a lightweight vanilla-JS particle field: ambient drift by default, a soft cursor-reactive glow on hover-capable devices, a single static frame under `prefers-reduced-motion`, and the animation loop pauses automatically whenever the hero scrolls out of view or the browser tab is hidden (via `IntersectionObserver` + the Page Visibility API) to avoid unnecessary CPU/GPU use.
 
 ## Visual identity
 
