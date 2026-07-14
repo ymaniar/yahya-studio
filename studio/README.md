@@ -13,7 +13,7 @@ studio/
 │   └── animations.css   # keyframes + reveal-on-scroll transitions
 ├── js/
 │   └── script.js        # mobile nav toggle + scroll-reveal (reduced-motion aware)
-├── images/               # project screenshots (not added yet)
+├── images/               # project preview screenshots (luckin-cafe-preview.jpg, palm-barber-preview.jpg)
 └── README.md
 ```
 
@@ -40,12 +40,18 @@ The Contact section (`#contact` in `index.html`) is a real form handled by **Net
 
 Both are linked as live external sites only (`target="_blank"`); their source files under `clients/` are not read or modified by this project.
 
+## Project preview images
+
+`images/luckin-cafe-preview.jpg` and `images/palm-barber-preview.jpg` are hero-section screenshots (1280×800) captured directly from the two live sites, used as the `<img>` thumbnails in the Selected Work cards. Both are `loading="lazy"` with explicit `width`/`height` to avoid layout shift.
+
 ## Known placeholders (to replace later)
 
-- **Project thumbnails**: currently CSS-only textured placeholders (diagonal line pattern + monogram badge) in `work-thumb-luckin`, `work-thumb-palm` — swap in real screenshots in `images/` once available, and update the `<div class="work-thumb">` markup to an `<img>`.
 - **Open Graph image**: no `og:image` is set yet since there's no real screenshot/brand image to point to.
+
+## Visual identity
+
+Dark "tech studio" theme: near-black background (`--color-bg`), white/soft-gray text, and an electric cyan + indigo gradient accent (`--color-accent`, `--color-accent-2`), all defined as CSS custom properties in `css/style.css`. Labels, tags, index numbers, and form field labels use a system monospace stack (`--font-mono`) for a code/interface-inspired feel — no external fonts loaded.
 
 ## Deliberately not included
 
 - Real phone number or email (not yet provided)
-- Client logos/screenshots (placeholder blocks only, per this ticket's instruction)

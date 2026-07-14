@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yahya Studio — Premium Websites for Local Businesses</title>
-  <meta name="description" content="Yahya Studio designs and builds modern, premium websites for cafés, barbershops, restaurants, and local brands that want to look serious online." />
-  <meta name="theme-color" content="#f7f5f1" />
+  <meta name="description" content="Yahya Studio designs and builds fast, modern websites for cafés, barbershops, restaurants, and local brands that need to look serious online." />
+  <meta name="theme-color" content="#0a0c10" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314120f'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='32' font-weight='700' fill='%23f7f5f1' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='32' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yahya Studio" />
   <meta property="og:title" content="Yahya Studio — Premium Websites for Local Businesses" />
-  <meta property="og:description" content="I design and build modern websites for cafés, barbershops, restaurants, and local brands that want to look serious online." />
+  <meta property="og:description" content="I design and build fast, modern websites for cafés, barbershops, restaurants, and local brands that need to look serious online." />
   <meta property="og:locale" content="en_US" />
 
   <link rel="stylesheet" href="css/style.css" />
@@ -26,6 +26,7 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-bar">
       <a class="brand" href="#main">
+        <span class="brand-mark" aria-hidden="true">{ }</span>
         <span class="brand-name">Yahya Studio</span>
       </a>
 
@@ -50,13 +51,16 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <canvas id="heroStarfield" class="hero-starfield" aria-hidden="true"></canvas>
+      <div class="hero-glow hero-glow-cyan" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-violet" aria-hidden="true"></div>
+
       <div class="container hero-inner">
         <div class="hero-content reveal">
           <span class="hero-kicker" aria-hidden="true"></span>
           <p class="eyebrow">Yahya Studio</p>
           <h1>Premium websites for local businesses</h1>
-          <p class="hero-lead">I design and build modern, one-page websites for cafés, barbershops, restaurants, and local brands that want to look serious online.</p>
+          <p class="hero-lead">I design and build fast, modern websites for cafés, barbershops, restaurants, and local brands that need to look serious online.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work">View Work</a>
@@ -70,21 +74,24 @@
             2 live projects
           </div>
 
-          <ul class="hero-panel-list">
+          <ul class="hero-signal-list">
             <li>
-              <span class="hero-panel-label">Café / Restaurant</span>
-              <span class="hero-panel-name">Luckin Café</span>
+              <span class="hero-signal-dot" aria-hidden="true"></span>
+              <span class="hero-signal-value">Design + development</span>
             </li>
             <li>
-              <span class="hero-panel-label">Barbershop</span>
-              <span class="hero-panel-name">Palm Barber Shop</span>
+              <span class="hero-signal-dot" aria-hidden="true"></span>
+              <span class="hero-signal-value">Fast static websites</span>
+            </li>
+            <li>
+              <span class="hero-signal-dot" aria-hidden="true"></span>
+              <span class="hero-signal-value">Netlify deployment</span>
+            </li>
+            <li>
+              <span class="hero-signal-dot" aria-hidden="true"></span>
+              <span class="hero-signal-value">Mobile-first</span>
             </li>
           </ul>
-
-          <div class="hero-panel-foot">
-            <span>Designed &amp; built end-to-end</span>
-            <span>One-page · Responsive · Live</span>
-          </div>
         </aside>
       </div>
     </section>
@@ -98,18 +105,25 @@
 
         <div class="work-grid">
           <article class="work-card reveal">
-            <div class="work-thumb work-thumb-luckin" aria-hidden="true">
-              <span class="work-thumb-index">01</span>
-              <span class="work-thumb-mark">LC</span>
+            <div class="work-thumb">
+              <img
+                src="images/luckin-cafe-preview.jpg"
+                alt="Luckin Café website preview"
+                width="1280"
+                height="800"
+                loading="lazy"
+              />
+              <span class="work-thumb-index" aria-hidden="true">01</span>
             </div>
             <div class="work-card-body">
               <p class="work-category">Café / Restaurant</p>
               <h3>Luckin Café</h3>
               <p class="work-description">Premium one-page website for a café in Targa, Marrakech, with menu, gallery, terrace, and location information.</p>
-              <ul class="work-detail-row">
-                <li>One-page website</li>
+              <ul class="work-tags">
+                <li>One-page</li>
                 <li>Responsive</li>
-                <li>Live on Netlify</li>
+                <li>Live</li>
+                <li>Netlify</li>
               </ul>
               <a class="btn btn-secondary btn-small" href="https://luckin-cafe.netlify.app/" target="_blank" rel="noopener noreferrer">
                 View live site <span aria-hidden="true">→</span>
@@ -118,18 +132,25 @@
           </article>
 
           <article class="work-card reveal">
-            <div class="work-thumb work-thumb-palm" aria-hidden="true">
-              <span class="work-thumb-index">02</span>
-              <span class="work-thumb-mark">PB</span>
+            <div class="work-thumb">
+              <img
+                src="images/palm-barber-preview.jpg"
+                alt="Palm Barber Shop website preview"
+                width="1280"
+                height="800"
+                loading="lazy"
+              />
+              <span class="work-thumb-index" aria-hidden="true">02</span>
             </div>
             <div class="work-card-body">
               <p class="work-category">Barbershop</p>
               <h3>Palm Barber Shop</h3>
               <p class="work-description">Premium men's grooming website with real services, prices, booking message, contact, and address.</p>
-              <ul class="work-detail-row">
-                <li>One-page website</li>
+              <ul class="work-tags">
+                <li>One-page</li>
                 <li>Responsive</li>
-                <li>Live on Netlify</li>
+                <li>Live</li>
+                <li>Netlify</li>
               </ul>
               <a class="btn btn-secondary btn-small" href="https://palm-barber-shop.netlify.app/" target="_blank" rel="noopener noreferrer">
                 View live site <span aria-hidden="true">→</span>
@@ -140,64 +161,77 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services & Stack -->
     <section class="services" id="services">
       <div class="container">
         <span class="section-kicker" aria-hidden="true"></span>
         <p class="eyebrow">Services</p>
-        <h2>What I build</h2>
+        <h2>Services &amp; stack</h2>
 
-        <ul class="services-grid">
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">01</span>
-            <div class="service-body">
-              <span class="service-name">Website design</span>
-              <p class="service-desc">A distinct look for your brand, not a generic template.</p>
+        <div class="services-columns">
+          <div class="services-column">
+            <p class="services-column-title">Services</p>
+            <ul class="services-grid">
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">01</span>
+                <div class="service-body">
+                  <span class="service-name">Website design</span>
+                  <p class="service-desc">A distinct look for your brand, not a generic template.</p>
+                </div>
+              </li>
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">02</span>
+                <div class="service-body">
+                  <span class="service-name">One-page business websites</span>
+                  <p class="service-desc">Everything a customer needs on a single, fast-loading scroll.</p>
+                </div>
+              </li>
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">03</span>
+                <div class="service-body">
+                  <span class="service-name">Menu &amp; service pages</span>
+                  <p class="service-desc">Clear pricing and offerings, easy to scan on any device.</p>
+                </div>
+              </li>
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">04</span>
+                <div class="service-body">
+                  <span class="service-name">Mobile-first design</span>
+                  <p class="service-desc">Built for the screen most customers actually use.</p>
+                </div>
+              </li>
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">05</span>
+                <div class="service-body">
+                  <span class="service-name">Contact / WhatsApp / Google Maps integration</span>
+                  <p class="service-desc">Directions, calls, and messages, one tap away.</p>
+                </div>
+              </li>
+              <li class="service-item reveal">
+                <span class="service-index" aria-hidden="true">06</span>
+                <div class="service-body">
+                  <span class="service-name">Deployment</span>
+                  <p class="service-desc">Live on Netlify with a shareable link from day one.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="services-column">
+            <p class="services-column-title">Stack</p>
+            <div class="stack-card reveal">
+              <p class="stack-card-label">stack.json</p>
+              <ul class="stack-grid">
+                <li class="stack-chip">HTML</li>
+                <li class="stack-chip">CSS</li>
+                <li class="stack-chip">JavaScript</li>
+                <li class="stack-chip">Netlify</li>
+                <li class="stack-chip">SEO metadata</li>
+                <li class="stack-chip">Responsive design</li>
+              </ul>
             </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">02</span>
-            <div class="service-body">
-              <span class="service-name">One-page business websites</span>
-              <p class="service-desc">Everything a customer needs on a single, fast-loading scroll.</p>
-            </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">03</span>
-            <div class="service-body">
-              <span class="service-name">Menu &amp; service pages</span>
-              <p class="service-desc">Clear pricing and offerings, easy to scan on any device.</p>
-            </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">04</span>
-            <div class="service-body">
-              <span class="service-name">Mobile-first design</span>
-              <p class="service-desc">Built for the screen most customers actually use.</p>
-            </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">05</span>
-            <div class="service-body">
-              <span class="service-name">Google Maps &amp; contact integration</span>
-              <p class="service-desc">Directions and contact details, one tap away.</p>
-            </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">06</span>
-            <div class="service-body">
-              <span class="service-name">Deployment on Netlify</span>
-              <p class="service-desc">Fast, secure hosting with a live link from day one.</p>
-            </div>
-          </li>
-          <li class="service-item reveal">
-            <span class="service-index" aria-hidden="true">07</span>
-            <div class="service-body">
-              <span class="service-name">Basic SEO setup</span>
-              <p class="service-desc">Structured metadata so the site is found, not just built.</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -239,23 +273,17 @@
         <div class="why-text reveal">
           <span class="section-kicker" aria-hidden="true"></span>
           <p class="eyebrow">Why it matters</p>
-          <h2>Instagram helps. A website closes the deal.</h2>
-          <p class="why-lead">A social page proves a business exists. A website proves it's serious — and does the selling before a customer ever walks in.</p>
+          <h2>Instagram gets attention. A website builds trust.</h2>
+          <p class="why-lead">A social feed is temporary and easy to miss. A website is a stable address — the one place customers can always find what they need.</p>
         </div>
 
-        <ul class="why-points">
-          <li class="why-point reveal">
-            <span class="why-point-index" aria-hidden="true">01</span>
-            <span class="why-point-text">Posts get buried in an algorithm. A website is always at the same address, open 24/7.</span>
-          </li>
-          <li class="why-point reveal">
-            <span class="why-point-index" aria-hidden="true">02</span>
-            <span class="why-point-text">A real website signals a business that takes itself seriously — and earns trust before the first visit.</span>
-          </li>
-          <li class="why-point reveal">
-            <span class="why-point-index" aria-hidden="true">03</span>
-            <span class="why-point-text">Menus, prices, hours, and location are found in seconds, not by scrolling a feed.</span>
-          </li>
+        <ul class="why-tags reveal">
+          <li>Services</li>
+          <li>Prices</li>
+          <li>Photos</li>
+          <li>Location</li>
+          <li>Contact</li>
+          <li>Booking</li>
         </ul>
       </div>
     </section>
@@ -405,7 +433,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <p class="footer-brand">Yahya Studio</p>
-      <p class="footer-tagline">Websites for local businesses</p>
+      <p class="footer-tagline">Design &amp; development for local businesses</p>
       <p class="footer-copyright">© 2026 Yahya Studio. All rights reserved.</p>
     </div>
   </footer>

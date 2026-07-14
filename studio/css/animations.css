@@ -13,6 +13,17 @@
   }
 }
 
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 3px rgba(45, 212, 238, 0.2);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 6px rgba(45, 212, 238, 0.08);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
