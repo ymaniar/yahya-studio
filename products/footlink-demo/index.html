@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kick Off Booking Hub — Proposal Demo for Kick Off Marrakech</title>
+<meta name="description" content="Kick Off Booking Hub — a booking and open-match proposal demo for Kick Off Marrakech. Book pitches, create matches, find missing players, pay cash at the center.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- Icon sprite: hand-authored inline icons, no external assets -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="icon-team" viewBox="0 0 24 24"><circle cx="8.5" cy="9" r="3"/><circle cx="16" cy="10.5" r="2.4"/><path d="M3 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5M14.5 20c0-2.2 1.7-4 4-4s4 1.8 4 4"/></symbol>
+  <symbol id="icon-chat-check" viewBox="0 0 24 24"><path d="M4 12.2C4 7.7 7.9 4 12.5 4S21 7.7 21 12.2 17.1 20.4 12.5 20.4c-1.2 0-2.4-.2-3.4-.7L4 21l1.3-4.2A7.9 7.9 0 0 1 4 12.2Z"/><path d="M9.3 12.3l1.9 1.9 3.7-3.9"/></symbol>
+  <symbol id="icon-cash" viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="11" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 8.5v7M18 8.5v7"/></symbol>
+  <symbol id="icon-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.2 15.9 10l-1.5 4.6H9.6L8.1 10 12 7.2ZM12 3v4.2M4.6 8.5l3.5 1.5M19.4 8.5l-3.5 1.5M6.8 19l1.9-4.4M17.2 19l-1.9-4.4"/></symbol>
+  <symbol id="icon-padel" viewBox="0 0 24 24"><ellipse cx="10.5" cy="9" rx="6.3" ry="7.2" transform="rotate(-18 10.5 9)"/><path d="M8 14.5 3.2 21" stroke-linecap="round"/><circle cx="10.5" cy="9" r="0.4" fill="currentColor"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.3l3.6 2.1"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6.5v5.3c0 5-3 8.1-7 9.7-4-1.6-7-4.7-7-9.7V6.5L12 3.5Z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M2.5 20h19"/></symbol>
+  <symbol id="icon-layers" viewBox="0 0 24 24"><path d="M12 3.5 21 9l-9 5.5L3 9l9-5.5Z"/><path d="M3 14.2 12 19.7l9-5.5M3 11.6l9 5.5 9-5.5"/></symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M7.5 10.5V7.8a4.5 4.5 0 0 1 9 0v2.7"/></symbol>
+  <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M4 20.5 5.2 16A8.4 8.4 0 1 1 8.4 19l-4.4 1.5Z"/><path d="M8.6 9.3c.2-.6.4-.6.7-.6h.5c.2 0 .4 0 .6.5s.7 1.7.8 1.8c0 .1.1.3 0 .4-.1.2-.2.3-.3.5-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.2.5.1.6-.1l.6-.8c.2-.3.4-.2.6-.1l1.7.9c.2.1.4.2.5.3.1.2.1.9-.2 1.4-.3.6-1.5 1.1-2.1 1.2-.6.1-1.2.1-3.9-1-3.3-1.4-5.3-4.6-5.5-4.8-.1-.2-1.3-1.8-1.3-3.4 0-1.6.8-2.4 1.1-2.7Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-6.6 7-11.8a7 7 0 0 0-14 0c0 5.2 7 11.8 7 11.8Z"/><circle cx="12" cy="9.6" r="2.4"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Kick Off Booking Hub home">
+      <span class="brand-mark" aria-hidden="true"><svg class="icon"><use href="#icon-ball"></use></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Kick Off Booking Hub</span>
+        <span class="brand-pill">Proposal demo</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <a href="#book">Book</a>
+      <a href="#matches">Open Matches</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#benefits">Benefits</a>
+      <a class="btn btn-primary nav-cta" href="#book">Book a pitch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="pitch-bg" aria-hidden="true">
+      <div class="pitch-halfway"></div>
+      <div class="pitch-circle"></div>
+      <div class="pitch-box pitch-box-left"></div>
+      <div class="pitch-box pitch-box-right"></div>
+    </div>
+    <div class="section-inner hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><svg class="icon icon-sm"><use href="#icon-pin"></use></svg> Proposal demo built for Kick Off Marrakech</p>
+        <h1>Reserve your pitch. <span class="accent-text">Fill your match.</span></h1>
+        <p class="hero-sub">A booking and open-match system designed for Kick Off Marrakech — football players reserve slots, invite friends, find missing players, and pay cash at the center.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a pitch</a>
+          <a class="btn btn-light" href="#matches">Join an open match</a>
+        </div>
+
+        <ul class="hero-stats">
+          <li><svg class="icon"><use href="#icon-ball"></use></svg> Football 5v5 / 7v7</li>
+          <li><svg class="icon"><use href="#icon-padel"></use></svg> Padel courts</li>
+          <li><svg class="icon"><use href="#icon-clock"></use></svg> Open daily 08h00–01h00</li>
+          <li><svg class="icon"><use href="#icon-cash"></use></svg> Cash at center</li>
+        </ul>
+      </div>
+
+      <div class="hero-preview" id="heroPreview">
+        <p class="hero-preview-label">Today</p>
+        <p class="hero-preview-title" id="heroPreviewTitle">Football 5v5</p>
+        <p class="hero-preview-time" id="heroPreviewTime">20:00</p>
+        <div class="hero-preview-progress">
+          <div class="match-progress-track"><div class="match-progress-fill" id="heroPreviewFill"></div></div>
+          <p class="hero-preview-count"><span id="heroPreviewJoined">7</span>/<span id="heroPreviewTotal">10</span> players</p>
+        </div>
+        <p class="hero-preview-needed"><strong id="heroPreviewNeeded">3</strong> players needed</p>
+        <span class="status-badge badge-open-match">Open match</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="section" id="book" aria-labelledby="book-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="book-heading">Book a Pitch or Court</h2>
+        <p class="section-lead">Choose your sport, pick a slot, and Kick Off confirms by WhatsApp.</p>
+      </div>
+
+      <div class="panel booking-panel">
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="bookSport">Sport</label>
+              <select id="bookSport" name="bookSport">
+                <option value="football">Football</option>
+                <option value="padel">Padel</option>
+              </select>
+            </div>
+            <div class="form-field" id="footballTypeField">
+              <label for="pitchType">Pitch type</label>
+              <select id="pitchType" name="pitchType">
+                <option value="5v5">5v5</option>
+                <option value="7v7">7v7</option>
+              </select>
+            </div>
+            <div class="form-field" id="padelTypeField" hidden>
+              <label for="padelType">Match type</label>
+              <select id="padelType" name="padelType">
+                <option value="1v1">1v1</option>
+                <option value="2v2">2v2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="bookDate">Date</label>
+              <input type="date" id="bookDate" name="bookDate" required>
+            </div>
+            <div class="form-field">
+              <label for="bookTime">Time slot</label>
+              <select id="bookTime" name="bookTime" required>
+                <option value="">Select a time</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="pitchCourt">Pitch / court</label>
+              <select id="pitchCourt" name="pitchCourt"></select>
+            </div>
+            <div class="form-field">
+              <label for="bookingType">Booking type</label>
+              <select id="bookingType" name="bookingType">
+                <option value="private">Private booking</option>
+                <option value="open">Open match</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="open-match-fields" id="openMatchFields" hidden>
+            <legend>Open match details</legend>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="playersConfirmed">Players already confirmed</label>
+                <input type="number" id="playersConfirmed" name="playersConfirmed" min="0" max="14" value="1" inputmode="numeric">
+              </div>
+              <div class="form-field">
+                <label for="playersNeeded">Players needed</label>
+                <input type="number" id="playersNeeded" name="playersNeeded" min="1" max="14" value="9" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="matchLevel">Level</label>
+              <select id="matchLevel" name="matchLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="playerName">Name</label>
+              <input type="text" id="playerName" name="playerName" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="playerPhone">Phone / WhatsApp</label>
+              <input type="tel" id="playerPhone" name="playerPhone" autocomplete="tel" placeholder="+212 6XX XXX XXX" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="playerNotes">Notes <span class="optional">(optional)</span></label>
+            <textarea id="playerNotes" name="playerNotes" rows="3" placeholder="Anything Kick Off should know..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Request booking</button>
+        </form>
+
+        <div class="success-card" id="bookingSuccess" role="status" aria-live="polite" tabindex="-1" hidden>
+          <span class="success-icon" aria-hidden="true">✓</span>
+          <h3>Booking request created.</h3>
+          <p>Kick Off can confirm by WhatsApp.</p>
+          <p>Payment stays cash at the center.</p>
+          <p class="success-summary" id="bookingSummary"></p>
+          <button type="button" class="btn btn-secondary btn-block" id="bookingAgainBtn">Make another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY -->
+  <section class="section section-alt" id="availability" aria-labelledby="availability-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="availability-heading">Today's Availability</h2>
+        <p class="section-lead">Tap a slot to pre-fill your booking above.</p>
+      </div>
+
+      <div class="app-frame">
+        <div class="tabs" role="tablist" aria-label="Sport availability">
+          <button type="button" class="tab is-active" id="tabFootball" role="tab" aria-selected="true" aria-controls="panelFootball">
+            <svg class="icon"><use href="#icon-ball"></use></svg> Football
+          </button>
+          <button type="button" class="tab" id="tabPadel" role="tab" aria-selected="false" aria-controls="panelPadel">
+            <svg class="icon"><use href="#icon-padel"></use></svg> Padel
+          </button>
+        </div>
+
+        <div class="tab-panel" id="panelFootball" role="tabpanel" aria-labelledby="tabFootball">
+          <ul class="slots-list" id="footballSlotsList" role="list"></ul>
+        </div>
+        <div class="tab-panel" id="panelPadel" role="tabpanel" aria-labelledby="tabPadel" hidden>
+          <ul class="slots-list" id="padelSlotsList" role="list"></ul>
+        </div>
+
+        <ul class="legend" aria-hidden="true">
+          <li><span class="dot dot-available"></span> Available</li>
+          <li><span class="dot dot-almost"></span> Almost full</li>
+          <li><span class="dot dot-open"></span> Open match</li>
+          <li><span class="dot dot-reserved"></span> Reserved</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN MATCHES -->
+  <section class="section" id="matches" aria-labelledby="matches-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="matches-heading">Find players for tonight</h2>
+        <p class="section-lead">Missing a few players? Join a match already in motion.</p>
+      </div>
+      <div class="matches-grid" id="matchesGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" id="how-it-works" aria-labelledby="how-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="how-heading">How It Works</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-icon"><svg class="icon"><use href="#icon-calendar"></use></svg></span>
+          <h3>Choose a sport and slot</h3>
+          <p>Football or Padel — browse today's availability and pick a time.</p>
+        </li>
+        <li class="step">
+          <span class="step-icon"><svg class="icon"><use href="#icon-team"></use></svg></span>
+          <h3>Create or join a match</h3>
+          <p>Bring your own team, or join an open match to meet new players.</p>
+        </li>
+        <li class="step">
+          <span class="step-icon"><svg class="icon"><use href="#icon-chat-check"></use></svg></span>
+          <h3>Kick Off confirms by WhatsApp</h3>
+          <p>Your request is reviewed and confirmed directly on WhatsApp.</p>
+        </li>
+        <li class="step">
+          <span class="step-icon"><svg class="icon"><use href="#icon-cash"></use></svg></span>
+          <h3>Pay cash at the center</h3>
+          <p>No online payment. Settle up when you arrive at Kick Off.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CLUB DASHBOARD -->
+  <section class="section" id="dashboard" aria-labelledby="dashboard-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="dashboard-heading">Club Dashboard</h2>
+        <p class="section-lead">What the Kick Off team would see — live schedule, demand, and cash, all in one place.</p>
+      </div>
+
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <p class="stat-label">Today's bookings</p>
+          <p class="stat-value" id="statBookings">18</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Pending confirmations</p>
+          <p class="stat-value" id="statPending">5</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Open matches</p>
+          <p class="stat-value" id="statOpenMatches">6</p>
+        </div>
+        <div class="stat-card stat-highlight">
+          <p class="stat-label">Expected cash today</p>
+          <p class="stat-value" id="statCash">4,800 MAD</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Occupancy</p>
+          <p class="stat-value" id="statOccupancy">82%</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Players needed tonight</p>
+          <p class="stat-value" id="statPlayersNeeded">11</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Today's Schedule</h3>
+      <div class="table-wrap">
+        <table class="schedule-table" id="scheduleTable">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Slot</th>
+              <th scope="col">Status</th>
+              <th scope="col">Type</th>
+              <th scope="col">Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYER / MATCH DATABASE -->
+  <section class="section section-alt" id="players" aria-labelledby="players-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="players-heading">Player Database</h2>
+        <p class="section-lead">A growing record of who plays, how often, and at what level.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="players-table" id="playersTable">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Sport</th>
+              <th scope="col">Level</th>
+              <th scope="col">Last played</th>
+              <th scope="col">Bookings</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody id="playersBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section" id="benefits" aria-labelledby="benefits-heading">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="benefits-heading">Why Kick Off Would Use This</h2>
+      </div>
+      <ul class="benefits-grid">
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-chart"></use></svg></span>
+          <h3>Fill empty pitch hours</h3>
+          <p>Open matches turn half-booked slots into full pitches and courts.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-whatsapp"></use></svg></span>
+          <h3>Reduce scattered WhatsApp booking chaos</h3>
+          <p>Requests arrive structured, not buried across three different chats.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-team"></use></svg></span>
+          <h3>Let players complete teams</h3>
+          <p>No more cancelled games because a team is short a few players.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-cash"></use></svg></span>
+          <h3>Keep cash payment at the center</h3>
+          <p>No online payment processors, no fees, no disputes.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-layers"></use></svg></span>
+          <h3>Manage football and padel in one place</h3>
+          <p>One schedule, one dashboard, both sports.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="benefit-icon"><svg class="icon"><use href="#icon-lock"></use></svg></span>
+          <h3>Keep full control before confirming</h3>
+          <p>Every request is reviewed by Kick Off before it's final.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- OWNER PREVIEW -->
+  <section class="section section-alt" id="owner-preview" aria-labelledby="owner-preview-heading">
+    <div class="section-inner">
+      <div class="owner-preview-block">
+        <h2 id="owner-preview-heading">Owner preview</h2>
+        <p class="section-lead">This demo shows how Kick Off could manage football and padel reservations, open matches, player demand, and cash-at-center bookings from one clear dashboard.</p>
+        <div class="owner-preview-actions">
+          <button type="button" class="btn btn-primary" id="viewDashboardBtn">View dashboard</button>
+          <button type="button" class="btn btn-secondary" id="simulateBookingBtn">Simulate booking</button>
+          <a class="btn btn-whatsapp" id="ownerWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer">
+            <svg class="icon"><use href="#icon-whatsapp"></use></svg> Open WhatsApp confirmation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p><strong>Kick Off Booking Hub</strong> — proposal demo</p>
+    <p class="footer-note">Built as a booking and open-match concept for Kick Off Marrakech. Not an official platform. No real bookings, payments, or messages are sent.</p>
+    <p class="footer-note footer-address"><svg class="icon icon-sm"><use href="#icon-pin"></use></svg> Route de Targa, Marrakech 40000 · Open daily 08h00–01h00</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
