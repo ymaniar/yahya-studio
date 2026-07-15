@@ -105,6 +105,14 @@ p {
   padding: 0 var(--space-3);
 }
 
+#work,
+#services,
+#process,
+#planner,
+#contact {
+  scroll-margin-top: 90px;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -743,6 +751,184 @@ button:focus-visible {
   color: var(--color-accent);
 }
 
+/* ---- Website Planner ---- */
+
+.planner {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+}
+
+.planner-lead {
+  max-width: 56ch;
+  margin-bottom: var(--space-4);
+  font-size: 1.05rem;
+}
+
+.planner-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.planner-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.planner-field {
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.planner-field legend {
+  padding: 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-dim);
+}
+
+.planner-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--space-2);
+}
+
+.planner-pill {
+  position: relative;
+  cursor: pointer;
+}
+
+.planner-pill span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-dim);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.planner-pill:hover span {
+  border-color: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.planner-pill input:checked + span {
+  background: var(--gradient-accent);
+  border-color: transparent;
+  color: var(--color-on-accent);
+}
+
+.planner-pill input:focus-visible + span {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.planner-result {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.7);
+}
+
+.planner-result-label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.planner-result-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.planner-result-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.planner-result-key {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-dim);
+  flex-shrink: 0;
+}
+
+.planner-result-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  text-align: right;
+}
+
+.planner-result-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.planner-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.planner-result-tags li {
+  font-family: var(--font-mono);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(45, 212, 238, 0.3);
+  background: var(--color-accent-soft);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-accent);
+}
+
+.planner-result-explanation {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--color-ink-dim);
+}
+
+.planner-cta {
+  width: 100%;
+  justify-content: center;
+}
+
 /* ---- Contact ---- */
 
 .contact {
@@ -1006,6 +1192,14 @@ fieldset.form-field legend {
 
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .planner-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-result {
+    position: static;
   }
 
   .contact-layout {

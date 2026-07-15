@@ -240,4 +240,163 @@
 
     window.addEventListener('resize', handleResize);
   }
+
+  // ---- Website Planner ----
+  var plannerSection = document.getElementById('planner');
+
+  if (plannerSection) {
+    var businessRadios = plannerSection.querySelectorAll('input[name="planner-business-type"]');
+    var goalRadios = plannerSection.querySelectorAll('input[name="planner-main-goal"]');
+    var featureChecks = plannerSection.querySelectorAll('input[name="planner-features"]');
+    var styleRadios = plannerSection.querySelectorAll('input[name="planner-style"]');
+    var timelineRadios = plannerSection.querySelectorAll('input[name="planner-timeline"]');
+
+    var plannerTypeEl = document.getElementById('plannerType');
+    var plannerSectionsEl = document.getElementById('plannerSections');
+    var plannerPriorityEl = document.getElementById('plannerPriority');
+    var plannerExplanationEl = document.getElementById('plannerExplanation');
+    var plannerUseButton = document.getElementById('plannerUseButton');
+    var contactSection = document.getElementById('contact');
+    var messageField = document.getElementById('message');
+
+    var BUSINESS_SECTIONS = {
+      'Café / Restaurant': ['Menu', 'Gallery', 'Location', 'WhatsApp / Contact'],
+      'Barbershop': ['Services', 'Prices', 'Booking message', 'Gallery', 'WhatsApp'],
+      'Beauty / Salon': ['Services', 'Gallery', 'Booking / Contact', 'Location'],
+      'Shop / Retail': ['Products / Catalog', 'Location', 'WhatsApp / Contact'],
+      'Service business': ['Services', 'Trust section', 'Contact form', 'Google Maps'],
+      'Other': ['Services / Info', 'Contact', 'Location']
+    };
+
+    var FEATURE_LABELS = {
+      'Services / prices': 'Services / Prices',
+      'Menu / product list': 'Menu',
+      'Photo gallery': 'Gallery',
+      'WhatsApp button': 'WhatsApp',
+      'Google Maps / location': 'Location',
+      'Contact form': 'Contact form',
+      'Booking message': 'Booking message'
+    };
+
+    var PRIORITY_BY_TIMELINE = {
+      'As soon as possible': 'High — start this week',
+      'This week': 'High — plan to start soon',
+      'This month': 'Medium — plenty of time to prepare',
+      'No rush': 'Low — no pressure, plan when ready'
+    };
+
+    var STYLE_DESCRIPTORS = {
+      'Clean and minimal': 'clean and minimal',
+      'Premium and elegant': 'premium and elegant',
+      'Dark and bold': 'dark and bold',
+      'Warm and friendly': 'warm and inviting',
+      'Modern tech': 'modern, tech-forward'
+    };
+
+    var GOAL_PHRASES = {
+      'Look more professional': 'look more professional online',
+      'Show services or prices': 'clearly show its services and prices',
+      'Get more calls / WhatsApp messages': 'get more calls and WhatsApp messages',
+      'Show menu or products': 'showcase its menu or products',
+      'Improve Google presence': 'improve its presence on Google',
+      'Replace an old website': 'replace an outdated website with something modern'
+    };
+
+    function getCheckedValue(radios) {
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return radios[i].value;
+      }
+      return radios.length ? radios[0].value : '';
+    }
+
+    function getCheckedValues(checks) {
+      var values = [];
+      checks.forEach(function (input) {
+        if (input.checked) values.push(input.value);
+      });
+      return values;
+    }
+
+    function getPlannerAnswers() {
+      return {
+        businessType: getCheckedValue(businessRadios),
+        mainGoal: getCheckedValue(goalRadios),
+        features: getCheckedValues(featureChecks),
+        style: getCheckedValue(styleRadios),
+        timeline: getCheckedValue(timelineRadios)
+      };
+    }
+
+    function buildSections(answers) {
+      var base = BUSINESS_SECTIONS[answers.businessType] || BUSINESS_SECTIONS.Other;
+      var merged = base.slice();
+      answers.features.forEach(function (feature) {
+        var label = FEATURE_LABELS[feature] || feature;
+        if (merged.indexOf(label) === -1) {
+          merged.push(label);
+        }
+      });
+      return merged;
+    }
+
+    function buildExplanation(answers, sections) {
+      var styleText = STYLE_DESCRIPTORS[answers.style] || 'clean and minimal';
+      var goalPhrase = GOAL_PHRASES[answers.mainGoal] || 'grow online';
+      return (
+        'A one-page website built ' + styleText + ', designed to help a ' + answers.businessType + ' ' +
+        goalPhrase + '. Suggested focus: ' + sections.slice(0, 3).join(', ') + '.'
+      );
+    }
+
+    function updateRecommendation() {
+      var answers = getPlannerAnswers();
+      var sections = buildSections(answers);
+
+      plannerTypeEl.textContent = 'One-page website';
+
+      plannerSectionsEl.innerHTML = '';
+      sections.forEach(function (section) {
+        var li = document.createElement('li');
+        li.textContent = section;
+        plannerSectionsEl.appendChild(li);
+      });
+
+      plannerPriorityEl.textContent = PRIORITY_BY_TIMELINE[answers.timeline] || PRIORITY_BY_TIMELINE['No rush'];
+      plannerExplanationEl.textContent = buildExplanation(answers, sections);
+    }
+
+    var plannerInputs = plannerSection.querySelectorAll('input');
+    plannerInputs.forEach(function (input) {
+      input.addEventListener('change', updateRecommendation);
+    });
+
+    updateRecommendation();
+
+    if (plannerUseButton && contactSection) {
+      plannerUseButton.addEventListener('click', function () {
+        var answers = getPlannerAnswers();
+        var sections = buildSections(answers);
+
+        if (messageField) {
+          var summary = [
+            'Website planner summary:',
+            '- Business type: ' + answers.businessType,
+            '- Main goal: ' + answers.mainGoal,
+            '- Needed features: ' + (answers.features.length ? answers.features.join(', ') : 'Not specified'),
+            '- Visual style: ' + answers.style,
+            '- Timeline: ' + answers.timeline,
+            '',
+            buildExplanation(answers, sections)
+          ].join('\n');
+          messageField.value = summary;
+        }
+
+        contactSection.scrollIntoView({ block: 'start' });
+
+        if (messageField) {
+          messageField.focus();
+        }
+      });
+    }
+  }
 })();
