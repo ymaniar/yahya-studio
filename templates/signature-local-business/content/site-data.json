@@ -1,0 +1,155 @@
+{
+  "_comment": "Placeholder/demo content for the Yahya Studio Signature Local Business Template. This file previews how a future CMS or Supabase backend could drive the site. The static HTML pages currently hardcode this same content directly.",
+  "business": {
+    "name": "Maison Local",
+    "tagline": "Quiet spaces. Memorable taste.",
+    "subtitle": "A premium local-business website template for cafés, restaurants, salons, and experience-led brands.",
+    "type": "Premium local café / restaurant concept (demo business)",
+    "description": "Maison Local is a placeholder brand created to demonstrate the Yahya Studio Signature Local Business Template. Any resemblance to a real business is coincidental."
+  },
+  "contact": {
+    "address": {
+      "line1": "128 Orchard Lane",
+      "line2": "Riverside District",
+      "city": "Springfield",
+      "region": "ST",
+      "postalCode": "00000",
+      "country": "Demo Country"
+    },
+    "phone": "+1 (000) 555-0142",
+    "email": "hello@maisonlocal.example",
+    "mapPlaceholder": true
+  },
+  "hours": [
+    { "day": "Monday", "open": "8:00 AM", "close": "6:00 PM" },
+    { "day": "Tuesday", "open": "8:00 AM", "close": "6:00 PM" },
+    { "day": "Wednesday", "open": "8:00 AM", "close": "6:00 PM" },
+    { "day": "Thursday", "open": "8:00 AM", "close": "8:00 PM" },
+    { "day": "Friday", "open": "8:00 AM", "close": "9:00 PM" },
+    { "day": "Saturday", "open": "9:00 AM", "close": "9:00 PM" },
+    { "day": "Sunday", "open": "9:00 AM", "close": "4:00 PM" }
+  ],
+  "signatureItems": [
+    {
+      "name": "Slow Roast Espresso",
+      "description": "A house blend roasted low and slow for a rounded, mellow finish.",
+      "price": "$5.50"
+    },
+    {
+      "name": "Herb Garden Tartine",
+      "description": "Toasted sourdough, whipped ricotta, seasonal herbs, olive oil.",
+      "price": "$12.00"
+    },
+    {
+      "name": "Evening Cheese Board",
+      "description": "A rotating selection of local cheeses, preserves, and warm bread.",
+      "price": "$18.00"
+    }
+  ],
+  "menu": {
+    "categories": [
+      {
+        "name": "Coffee & Espresso",
+        "items": [
+          { "name": "Slow Roast Espresso", "description": "House blend, roasted low and slow.", "price": "$5.50" },
+          { "name": "Oat Milk Flat White", "description": "Silky micro-foam, house oat milk.", "price": "$6.00" },
+          { "name": "Cold Brew", "description": "Steeped 18 hours, served over ice.", "price": "$5.75" },
+          { "name": "Matcha Latte", "description": "Ceremonial grade, lightly sweetened.", "price": "$6.50" }
+        ]
+      },
+      {
+        "name": "Morning",
+        "items": [
+          { "name": "Herb Garden Tartine", "description": "Whipped ricotta, seasonal herbs, olive oil.", "price": "$12.00" },
+          { "name": "Stone Fruit Yogurt Bowl", "description": "House granola, seasonal fruit, honey.", "price": "$10.50" },
+          { "name": "Soft Scramble Plate", "description": "Farm eggs, chives, toasted grain bread.", "price": "$13.00" }
+        ]
+      },
+      {
+        "name": "Midday",
+        "items": [
+          { "name": "Roasted Root Vegetable Salad", "description": "Seasonal roots, grains, citrus vinaigrette.", "price": "$14.00" },
+          { "name": "Slow Braised Short Rib Sandwich", "description": "Pickled onion, whole grain mustard, brioche.", "price": "$16.50" },
+          { "name": "Mushroom & Thyme Tart", "description": "Flaky pastry, wild mushroom, fresh thyme.", "price": "$13.50" }
+        ]
+      },
+      {
+        "name": "Evening",
+        "items": [
+          { "name": "Evening Cheese Board", "description": "Rotating local cheeses, preserves, warm bread.", "price": "$18.00" },
+          { "name": "Pan-Seared Seasonal Fish", "description": "Market vegetables, herb butter.", "price": "$24.00" },
+          { "name": "House Red / White Blend", "description": "By the glass, ask your server for tonight's pour.", "price": "$11.00" }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "ratingSummary": {
+      "score": "4.9",
+      "outOf": "5",
+      "reviewCountLabel": "Based on demo reviews",
+      "disclaimer": "Example rating for template preview purposes only — not a real aggregate score."
+    },
+    "items": [
+      {
+        "quote": "The kind of place you slow down in without meaning to. Every detail felt considered.",
+        "name": "A. Rivera",
+        "source": "Demo review",
+        "rating": 5
+      },
+      {
+        "quote": "Warm, unhurried, and the evening cheese board is worth the visit alone.",
+        "name": "J. Okafor",
+        "source": "Example review",
+        "rating": 5
+      },
+      {
+        "quote": "Quiet corners, good light, and coffee that doesn't rush you out the door.",
+        "name": "S. Laurent",
+        "source": "Demo review",
+        "rating": 5
+      }
+    ]
+  },
+  "gallery": [
+    { "caption": "Morning light across the front room", "alt": "Placeholder image: café interior in morning light" },
+    { "caption": "Hand-finished pastry case", "alt": "Placeholder image: pastry case detail" },
+    { "caption": "Evening table setting", "alt": "Placeholder image: evening table setting" },
+    { "caption": "Slow pour, house blend", "alt": "Placeholder image: coffee pour detail" },
+    { "caption": "Seasonal produce, market day", "alt": "Placeholder image: seasonal produce" },
+    { "caption": "Closing light on the terrace", "alt": "Placeholder image: terrace at dusk" }
+  ],
+  "faq": [
+    {
+      "question": "Can I reserve?",
+      "answer": "Yes — reservations can be made by phone or email, and are recommended for evening visits."
+    },
+    {
+      "question": "Do you offer custom orders?",
+      "answer": "Small custom requests for private groups and events are welcome with advance notice."
+    },
+    {
+      "question": "Are there vegan or gluten-free options?",
+      "answer": "Several menu items can be adapted — please let your server know about any dietary needs."
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "128 Orchard Lane, Riverside District, Springfield — see the map on our Contact page."
+    },
+    {
+      "question": "What are your opening hours?",
+      "answer": "Open daily from morning through evening, with extended hours Thursday through Saturday."
+    }
+  ],
+  "socialLinks": {
+    "instagram": "#",
+    "facebook": "#",
+    "pinterest": "#"
+  },
+  "navigation": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "Menu", "href": "menu.html" },
+    { "label": "Gallery", "href": "gallery.html" },
+    { "label": "Contact", "href": "contact.html" }
+  ]
+}
