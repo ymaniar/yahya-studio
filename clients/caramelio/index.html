@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caramelio — Café · Pâtisserie · Breakfast à Targa, Marrakech (concept)</title>
+  <meta name="description" content="Caramelio, café-pâtisserie dans une villa à Targa, Marrakech. Site concept non officiel proposé par Yahya Studio — petit-déjeuner, pâtisserie, cocktails et terrasse." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="home">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="index.html">
+        <span class="site-header__wordmark">Caramelio</span>
+        <span class="site-header__subtitle">Café · Pâtisserie · Breakfast</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html" aria-current="page">Accueil</a></li>
+          <li><a class="site-nav__link" href="carte.html">Carte</a></li>
+          <li><a class="site-nav__link" href="galerie.html">Galerie</a></li>
+          <li><a class="site-nav__link" href="occasions.html">Occasions</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn-outline-gold" href="https://maps.app.goo.gl/qix5PMnD1qW1fJyQ9" target="_blank" rel="noopener noreferrer">Itinéraire</a>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir/fermer le menu de navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO (video) ============ -->
+    <section class="hero">
+      <video class="hero__media" autoplay muted loop playsinline preload="metadata" poster="assets/images/villa-ambience-poster.jpg" aria-hidden="true">
+        <source src="assets/videos/villa-ambience-01.mp4" type="video/mp4" />
+      </video>
+      <img class="hero__media hero__poster-fallback" src="assets/images/villa-ambience-poster.jpg" width="560" height="848" alt="" aria-hidden="true" />
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Café · Pâtisserie · Breakfast</p>
+        <h1 class="hero__title">L'élégance d'un café villa.</h1>
+        <p class="hero__subtitle">Petit-déjeuner, pâtisserie, cocktails et terrasse dans une adresse chaleureuse à Targa.</p>
+
+        <div class="hero__details">
+          <span class="hero__detail">Ouvert jusqu'à 23:00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE / MENU PREVIEW (dark) ============ -->
+    <section class="section section--dark signature-section" style="background: var(--brown-section);" aria-labelledby="signature-heading">
+      <div class="container signature__layout">
+        <div>
+          <p class="eyebrow">Depuis la vitrine</p>
+          <h2 class="section-title" id="signature-heading">Trois signatures.</h2>
+          <p class="section-subtitle">Une sélection courte pour raconter l'esprit Caramelio : petit-déjeuner, douceur et moment en terrasse.</p>
+
+          <ul class="signature__list">
+            <li class="signature__item">
+              <div>
+                <span class="signature__item-name">Petit-déjeuner Caramelio</span>
+                <span class="signature__item-desc">Une sélection matinale généreuse, servie dans un cadre soigné.</span>
+              </div>
+              <span class="signature__item-price">Prix sur place</span>
+            </li>
+            <li class="signature__item">
+              <div>
+                <span class="signature__item-name">Pâtisserie maison</span>
+                <span class="signature__item-desc">Douceurs préparées avec soin, à déguster sur la terrasse ou au salon.</span>
+              </div>
+              <span class="signature__item-price">Selon la carte</span>
+            </li>
+            <li class="signature__item">
+              <div>
+                <span class="signature__item-name">Cocktail signature</span>
+                <span class="signature__item-desc">Une création maison pour prolonger un moment en terrasse.</span>
+              </div>
+              <span class="signature__item-price">Selon la carte</span>
+            </li>
+          </ul>
+
+          <div class="hero__actions signature__cta">
+            <a class="btn btn-outline-gold" href="carte.html">Voir la carte</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="signature__visual editorial-frame">
+            <img class="cover-img" src="assets/images/breakfast-table-02.jpg" width="1206" height="1208" loading="lazy" alt="Table de petit-déjeuner et pâtisserie Caramelio, mise en scène soignée" />
+            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+          </div>
+          <span class="frame-medallion" aria-hidden="true"><span class="frame-medallion__dot"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SALON / SERVICE SPLIT (dark, image left) ============ -->
+    <section class="section section--dark salon-section" style="background: var(--caramelio-dark-light);" aria-labelledby="salon-heading">
+      <div class="container signature">
+        <div>
+          <div class="signature__visual editorial-frame">
+            <img class="cover-img" src="assets/images/interior-lounge-01.jpg" width="818" height="1280" loading="lazy" alt="Salon intérieur de Caramelio, ambiance chaleureuse et végétation" />
+            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+          </div>
+          <span class="frame-medallion" aria-hidden="true"><span class="frame-medallion__dot"></span></span>
+        </div>
+
+        <div>
+          <p class="eyebrow">L'adresse de Targa</p>
+          <h2 class="section-title" id="salon-heading">Un café villa,<br />pensé pour s'attarder.</h2>
+          <p class="section-subtitle">Un accueil chaleureux, une villa élégante et une carte pensée pour les moments du matin jusqu'au soir.</p>
+          <p class="service__signature">Qualité, douceur et élégance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS (warm brown) ============ -->
+    <section class="section section--dark reviews-section" style="background: var(--caramelio-mid);" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="reviews-top">
+          <div class="section-heading" style="margin-bottom: 0;">
+            <p class="eyebrow">Avis</p>
+            <h2 class="section-title" id="reviews-heading">Ce qu'en disent les visiteurs.</h2>
+          </div>
+
+          <div class="reviews-rating">
+            <span class="rating-card__score">4.0<span>/5</span></span>
+            <span class="rating-card__stars" aria-hidden="true">★★★★☆</span>
+            <span class="rating-card__label">1.4k+ avis Google</span>
+          </div>
+        </div>
+
+        <div class="reviews-layout">
+          <article class="review-card review-card--featured">
+            <p class="review-card__quote">Un service rapide et une ambiance chaleureuse, idéal pour prendre son temps.</p>
+            <div class="review-card__meta">
+              <span>Med Med</span>
+              <span class="review-card__source">Avis public</span>
+            </div>
+          </article>
+
+          <div class="reviews-secondary__row">
+            <article class="review-card">
+              <p class="review-card__quote">Un petit-déjeuner satisfaisant, servi dans un cadre agréable.</p>
+              <div class="review-card__meta">
+                <span>Camille Lefetey</span>
+                <span class="review-card__source">Avis public</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <p class="review-card__quote">Une adresse appréciée pour l'accueil, la terrasse et les moments en famille.</p>
+              <div class="review-card__meta">
+                <span>Naima</span>
+                <span class="review-card__source">Avis public</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="rating-card__disclaimer reviews-disclaimer">Avis publics — aperçu de la réputation en ligne, non vérifiés par Yahya Studio.</p>
+      </div>
+    </section>
+
+    <!-- ============ INSTAGRAM (dark) ============ -->
+    <section class="section--tight section--dark instagram-section" style="background: var(--caramelio-dark-light);" aria-labelledby="social-heading">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Instagram</p>
+          <h2 class="section-title" id="social-heading">Moments de terrasse, douceurs et café.</h2>
+        </div>
+
+        <div class="insta-grid">
+          <a class="insta-tile" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Voir sur Instagram : la terrasse de Caramelio (nouvel onglet)">
+            <img class="insta-tile__art" src="assets/images/terrace-02.jpg" width="821" height="1280" loading="lazy" alt="La terrasse de Caramelio" />
+            <span class="insta-tile__icon" aria-hidden="true">＋</span>
+          </a>
+          <a class="insta-tile" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Voir sur Instagram : la salle à manger de Caramelio (nouvel onglet)">
+            <img class="insta-tile__art" src="assets/images/interior-dining-01.jpg" width="818" height="1280" loading="lazy" alt="La salle à manger de Caramelio" />
+            <span class="insta-tile__icon" aria-hidden="true">＋</span>
+          </a>
+          <a class="insta-tile" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Voir sur Instagram : dessert signature (nouvel onglet)">
+            <img class="insta-tile__art" src="assets/images/dessert-plate-01.jpg" width="886" height="1280" loading="lazy" alt="Assiette de dessert signature Caramelio" />
+            <span class="insta-tile__icon" aria-hidden="true">＋</span>
+          </a>
+        </div>
+
+        <div class="insta-cta">
+          <a class="btn btn-outline-gold" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">Voir Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ (warm creamy brown) ============ -->
+    <section class="section--tight faq--warm" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title" id="faq-heading">Bon à savoir</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
+                <span>Peut-on réserver une table ?</span>
+                <span class="faq-question__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+              <p class="faq-answer__inner">Pour les réservations, il est préférable d'appeler directement l'établissement.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+                <span>Proposez-vous des petits-déjeuners ?</span>
+                <span class="faq-question__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+              <p class="faq-answer__inner">Oui, le petit-déjeuner fait partie des services proposés par Caramelio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+                <span>Y a-t-il une terrasse ?</span>
+                <span class="faq-question__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+              <p class="faq-answer__inner">Oui, une terrasse est mentionnée parmi les services de l'établissement.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
+                <span>Peut-on venir avec des enfants ?</span>
+                <span class="faq-question__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
+              <p class="faq-answer__inner">La fiche mentionne un menu enfant.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
+                <span>Où se trouve Caramelio ?</span>
+                <span class="faq-question__icon" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5">
+              <p class="faq-answer__inner">Adresse indiquée : JXX2+63R, Marrakech, dans le quartier de Targa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__bg" aria-hidden="true"></div>
+
+    <div class="container site-footer__giant-wrap">
+      <span class="site-footer__giant">Caramelio</span>
+    </div>
+
+    <div class="container site-footer__cols">
+      <div class="site-footer__col">
+        <ul class="site-footer__nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="carte.html">Carte</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="occasions.html">Occasions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Nous trouver</p>
+        <address class="site-footer__address">JXX2+63R<br />Targa, Marrakech</address>
+        <a class="site-footer__phone" href="tel:+212524490595">05 24 49 05 95</a>
+        <a class="site-footer__insta" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">@carameliotarga</a>
+      </div>
+
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Caramelio</p>
+        <p class="site-footer__editorial">Pâtisserie raffinée.<br />Ambiance élégante.<br />Saveurs généreuses.</p>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom-row">
+      <span>Ouvert jusqu'à 23:00</span>
+      <span>Concept de site web proposé pour Caramelio — non officiel.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

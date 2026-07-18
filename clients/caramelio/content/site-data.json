@@ -1,0 +1,176 @@
+{
+  "_comment": "Concept/proposal content for Caramelio (Targa, Marrakech) — an unofficial demo website built by Yahya Studio to pitch a premium web presence. This file previews how a future admin dashboard could drive the site. The static HTML pages currently hardcode this same content directly. No claims here are official, no bookings/orders placed through this site are real, and no copyrighted photos are used.",
+  "disclaimer": "Concept de site web proposé pour Caramelio — non officiel.",
+  "business": {
+    "name": "Caramelio",
+    "tagline": "Café · Pâtisserie · Breakfast",
+    "subtitle": "Une adresse élégante à Targa pour le petit-déjeuner, la pâtisserie et les moments en terrasse.",
+    "type": "Café / pâtisserie / restaurant de petit-déjeuner",
+    "neighborhood": "Targa, Marrakech",
+    "description": "Caramelio est un café-pâtisserie installé dans une grande villa à Targa, connu pour son cadre chaleureux et haut de gamme, son petit-déjeuner soigné et sa terrasse."
+  },
+  "contact": {
+    "address": "JXX2+63R, Marrakech",
+    "phone": "05 24 49 05 95",
+    "phoneHref": "tel:+212524490595",
+    "mapPlaceholder": true,
+    "mapNote": "Carte à intégrer dès qu'une URL Google Maps précise sera fournie."
+  },
+  "hours": {
+    "note": "Horaires indicatifs d'après la fiche publique — à confirmer avec l'établissement.",
+    "closesAt": "23:00"
+  },
+  "priceRange": "50–100 MAD par personne",
+  "services": ["Terrasse", "Cocktails", "Menu enfant"],
+  "orderLinks": {
+    "glovo": "#",
+    "glovoNote": "Lien Glovo à remplacer par l'URL réelle de la fiche Caramelio."
+  },
+  "signatureItems": [
+    {
+      "name": "Petit-déjeuner Caramelio",
+      "description": "Une sélection matinale généreuse, servie dans un cadre soigné.",
+      "price": "Prix sur place"
+    },
+    {
+      "name": "Pâtisserie maison",
+      "description": "Douceurs préparées avec soin, à déguster sur la terrasse ou au salon.",
+      "price": "Selon la carte"
+    },
+    {
+      "name": "Cocktail signature",
+      "description": "Une création maison pour prolonger un moment en terrasse.",
+      "price": "Selon la carte"
+    }
+  ],
+  "menu": {
+    "note": "Sélection indicative — carte complète à confirmer avec l'établissement.",
+    "categories": [
+      {
+        "name": "Petit-déjeuner",
+        "items": [
+          { "name": "Formule Caramelio", "description": "Viennoiserie, jus frais, boisson chaude.", "price": "Prix sur place" },
+          { "name": "Œufs façon villa", "description": "Préparation du jour, pain maison.", "price": "Prix sur place" },
+          { "name": "Bol gourmand", "description": "Fruits de saison, granola, miel.", "price": "Prix sur place" }
+        ]
+      },
+      {
+        "name": "Pâtisserie",
+        "items": [
+          { "name": "Pâtisserie maison du jour", "description": "Sélection selon l'inspiration du chef pâtissier.", "price": "Selon la carte" },
+          { "name": "Douceur signature Caramelio", "description": "Une création propre à la maison.", "price": "Selon la carte" },
+          { "name": "Café gourmand", "description": "Café accompagné d'une mignardise.", "price": "Selon la carte" }
+        ]
+      },
+      {
+        "name": "Boissons & cocktails",
+        "items": [
+          { "name": "Café Caramelio", "description": "Espresso ou allongé, torréfaction sélectionnée.", "price": "Selon la carte" },
+          { "name": "Jus frais pressés", "description": "Fruits de saison, sans additifs.", "price": "Selon la carte" },
+          { "name": "Cocktail signature", "description": "Créations maison, avec ou sans alcool.", "price": "Selon la carte" }
+        ]
+      },
+      {
+        "name": "Enfants",
+        "items": [
+          { "name": "Menu enfant", "description": "Formule adaptée, mentionnée sur la fiche établissement.", "price": "Prix sur place" }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "ratingSummary": {
+      "score": "4.0",
+      "outOf": "5",
+      "reviewCountLabel": "1.4k+ avis Google",
+      "disclaimer": "Avis publics — aperçu de la réputation en ligne."
+    },
+    "items": [
+      {
+        "quote": "Un service rapide et une ambiance chaleureuse, idéal pour prendre son temps.",
+        "name": "Med Med",
+        "source": "Avis public"
+      },
+      {
+        "quote": "Un petit-déjeuner satisfaisant, servi dans un cadre agréable.",
+        "name": "Camille Lefetey",
+        "source": "Avis public"
+      },
+      {
+        "quote": "Une adresse fidèle, la qualité reste constante à chaque visite.",
+        "name": "Naima",
+        "source": "Avis public"
+      }
+    ]
+  },
+  "media": {
+    "note": "Médias approuvés par Caramelio — noms de fichiers nettoyés uniquement. Voir assets/README-media.md et assets/docs/media-mapping.txt.",
+    "video": {
+      "src": "assets/videos/villa-ambience-01.mp4",
+      "poster": "assets/images/villa-ambience-poster.jpg"
+    },
+    "excluded": {
+      "file": "assets/images/staff-service-01.jpg",
+      "reason": "Contient une personne visible — à utiliser uniquement avec l'accord explicite de Caramelio."
+    }
+  },
+  "gallery": [
+    { "src": "assets/images/facade-street-01.jpg", "caption": "La façade vue depuis la rue", "alt": "La villa Caramelio vue depuis la rue, en journée", "category": "Villa" },
+    { "src": "assets/images/terrace-03.jpg", "caption": "Sous les parasols", "alt": "La terrasse ombragée de Caramelio, tables et parasols", "category": "Terrasse" },
+    { "src": "assets/images/pastry-box-02.jpg", "caption": "Coffret de douceurs", "alt": "Coffret de pâtisseries assorties Caramelio", "category": "Pâtisserie" },
+    { "src": "assets/images/breakfast-table-02.jpg", "caption": "Petit-déjeuner soigné", "alt": "Table de petit-déjeuner Caramelio, jus frais et viennoiseries", "category": "Petit-déjeuner" },
+    { "src": "assets/images/counter-01.jpg", "caption": "Au comptoir", "alt": "Le comptoir de Caramelio", "category": "Cocktails" },
+    { "src": "assets/images/interior-dining-02.jpg", "caption": "Ambiance du soir", "alt": "La salle à manger de Caramelio, ambiance du soir", "category": "Villa" },
+    { "src": "assets/images/interior-booth-01.jpg", "caption": "Le coin banquette", "alt": "Banquette du salon intérieur de Caramelio", "category": "Villa" },
+    { "src": "assets/images/interior-art-01.jpg", "caption": "Détails de la villa", "alt": "Détail décoratif et œuvre murale dans la villa Caramelio", "category": "Villa" },
+    { "src": "assets/images/facade-entrance-01.jpg", "caption": "L'entrée en soirée", "alt": "L'entrée de Caramelio en soirée, enseigne lumineuse", "category": "Villa" }
+  ],
+  "occasions": {
+    "note": "Tarifs sur devis — contactez Caramelio pour discuter de votre projet.",
+    "items": [
+      { "src": "assets/images/wedding-cake-01.jpg", "caption": "Pièce montée florale", "category": "Mariage" },
+      { "src": "assets/images/wedding-cake-02.jpg", "caption": "Trois étages, finition florale", "category": "Mariage" },
+      { "src": "assets/images/wedding-cake-03.jpg", "caption": "Décor élégant", "category": "Mariage" },
+      { "src": "assets/images/wedding-cake-04.jpg", "caption": "Initiales personnalisées", "category": "Mariage" },
+      { "src": "assets/images/wedding-cake-05.jpg", "caption": "Structure géométrique", "category": "Mariage" },
+      { "src": "assets/images/custom-cake-01.jpg", "caption": "Création personnalisée", "category": "Sur mesure" },
+      { "src": "assets/images/custom-cake-02.jpg", "caption": "Thème sur demande", "category": "Sur mesure" },
+      { "src": "assets/images/kids-cake-01.jpg", "caption": "Thème d'anniversaire", "category": "Enfants" },
+      { "src": "assets/images/kids-cake-03.jpg", "caption": "Décor personnalisé", "category": "Enfants" },
+      { "src": "assets/images/kids-cake-02.jpg", "caption": "Thème sur demande", "category": "Enfants" }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Peut-on réserver une table ?",
+      "answer": "Pour les réservations, il est préférable d'appeler directement l'établissement."
+    },
+    {
+      "question": "Proposez-vous des petits-déjeuners ?",
+      "answer": "Oui, le petit-déjeuner fait partie des services proposés par Caramelio."
+    },
+    {
+      "question": "Y a-t-il une terrasse ?",
+      "answer": "Oui, une terrasse est mentionnée parmi les services de l'établissement."
+    },
+    {
+      "question": "Peut-on venir avec des enfants ?",
+      "answer": "La fiche mentionne un menu enfant."
+    },
+    {
+      "question": "Où se trouve Caramelio ?",
+      "answer": "Adresse indiquée : JXX2+63R, Marrakech, dans le quartier de Targa."
+    }
+  ],
+  "socialLinks": {
+    "instagram": "#",
+    "facebook": "#"
+  },
+  "navigation": [
+    { "label": "Accueil", "href": "index.html" },
+    { "label": "Carte", "href": "carte.html" },
+    { "label": "Galerie", "href": "galerie.html" },
+    { "label": "Occasions", "href": "occasions.html" },
+    { "label": "Contact", "href": "contact.html" }
+  ]
+}

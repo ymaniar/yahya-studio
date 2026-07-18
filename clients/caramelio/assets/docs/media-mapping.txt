@@ -1,0 +1,44 @@
+Caramelio media clean filename mapping
+=====================================
+
+Use only the clean filenames in HTML/CSS/JS.
+The raw uploaded filenames are listed only for reference.
+
+photo_5962962182808997415_y.jpg -> assets/images/breakfast-table-01.jpg
+photo_5962962182808997416_y.jpg -> assets/images/interior-lounge-01.jpg
+photo_5962962182808997417_y.jpg -> assets/images/terrace-01.jpg
+photo_5962962182808997418_y.jpg -> assets/images/terrace-02.jpg
+photo_5962962182808997419_y.jpg -> assets/images/interior-detail-01.jpg
+photo_5962962182808997420_y.jpg -> assets/images/staff-service-01.jpg
+photo_5962962182808997421_y.jpg -> assets/images/facade-entrance-01.jpg
+photo_5962962182808997422_y.jpg -> assets/images/facade-sign-01.jpg
+photo_5962962182808997423_y.jpg -> assets/images/facade-street-01.jpg
+photo_5962962182808997424_y.jpg -> assets/images/facade-terrace-01.jpg
+photo_5962962182808997425_y.jpg -> assets/images/interior-chair-01.jpg
+photo_5962962182808997426_y.jpg -> assets/images/interior-dining-01.jpg
+photo_5962962182808997427_y.jpg -> assets/images/interior-art-01.jpg
+photo_5962962182808997428_y.jpg -> assets/images/interior-dining-02.jpg
+photo_5962962182808997429_y.jpg -> assets/images/interior-dining-03.jpg
+photo_5962962182808997430_y.jpg -> assets/images/interior-booth-01.jpg
+photo_5962962182808997431_y.jpg -> assets/images/terrace-03.jpg
+photo_5962962182808997432_y.jpg -> assets/images/counter-01.jpg
+photo_5962962182808997433_y.jpg -> assets/images/breakfast-table-02.jpg
+photo_5962962182808997434_y.jpg -> assets/images/pastry-box-01.jpg
+photo_5962962182808997435_y.jpg -> assets/images/pastry-box-02.jpg
+photo_5962962182808997436_y.jpg -> assets/images/wedding-cake-01.jpg
+photo_5962962182808997437_y.jpg -> assets/images/cake-display-01.jpg
+photo_5962962182808997438_y.jpg -> assets/images/pastry-box-03.jpg
+photo_5962962182808997439_y.jpg -> assets/images/powder-cookies-01.jpg
+photo_5962962182808997440_y.jpg -> assets/images/wedding-cake-02.jpg
+photo_5962962182808997441_y.jpg -> assets/images/custom-cake-01.jpg
+photo_5962962182808997442_y.jpg -> assets/images/wedding-cake-03.jpg
+photo_5962962182808997443_y.jpg -> assets/images/kids-cake-01.jpg
+photo_5962962182808997444_y.jpg -> assets/images/wedding-cake-04.jpg
+photo_5962962182808997445_y.jpg -> assets/images/dessert-classique-01.jpg
+photo_5962962182808997446_y.jpg -> assets/images/wedding-cake-05.jpg
+photo_5962962182808997447_y.jpg -> assets/images/kids-cake-02.jpg
+photo_5962962182808997448_y.jpg -> assets/images/dessert-plate-01.jpg
+photo_5962962182808997449_y.jpg -> assets/images/kids-cake-03.jpg
+photo_5962962182808997450_y.jpg -> assets/images/custom-cake-02.jpg
+IMG_0858.MOV -> assets/videos/villa-ambience-01.mp4
+Generated poster -> assets/images/villa-ambience-poster.jpg
