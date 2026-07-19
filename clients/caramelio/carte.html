@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La carte — Caramelio</title>
-  <meta name="description" content="Sélection indicative de la carte Caramelio : petit-déjeuner, pâtisserie, boissons, cocktails et menu enfant. Site concept non officiel." />
+  <meta name="description" content="Carte complète Caramelio : carte sur place et menu en ligne / livraison — petit-déjeuner, boissons, pizzas, tacos, salades, pâtes, plats, couscous, burgers et desserts. Site concept non officiel." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="carte">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
   <header class="site-header">
@@ -25,10 +25,11 @@
           <li><a class="site-nav__link" href="occasions.html">Occasions</a></li>
           <li><a class="site-nav__link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="site-header__actions">
-          <a class="btn btn-outline-gold" href="contact.html">Itinéraire</a>
-        </div>
       </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn-outline-gold" href="contact.html">Itinéraire</a>
+      </div>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir/fermer le menu de navigation">
         <span class="nav-toggle__bar"></span>
@@ -40,144 +41,585 @@
 
   <main id="main">
     <section class="page-hero">
-      <img class="page-hero__photo" src="assets/images/interior-dining-03.jpg" width="813" height="1280" alt="" aria-hidden="true" />
+      <img class="page-hero__photo" src="assets/images/breakfast-table-01.jpg" width="816" height="1280" alt="" aria-hidden="true" />
       <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__scrim" aria-hidden="true"></div>
       <div class="container">
-        <p class="page-hero__eyebrow">Targa · Marrakech</p>
-        <h1 class="page-hero__title">La carte</h1>
-        <p class="page-hero__subtitle">Petit-déjeuner, pâtisserie, boissons et cocktails, et une formule pensée pour les enfants.</p>
+        <p class="page-hero__eyebrow">Notre carte</p>
+        <h1 class="page-hero__title">La carte.</h1>
+        <p class="page-hero__subtitle">Carte sur place, menu en ligne et douceurs Caramelio — une sélection généreuse à Targa.</p>
+        <div class="page-hero__ornament" aria-hidden="true">
+          <svg class="ornament-mark" width="180" height="24" viewBox="0 0 180 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12 H62" stroke="currentColor" stroke-width="1" />
+            <path d="M62 12 C68 4, 76 4, 82 12 C86 17.5, 91 19.5, 96 19.5" stroke="currentColor" stroke-width="1" fill="none" />
+            <path d="M84 19.5 C89 19.5, 94 17.5, 98 12 C104 4, 112 4, 118 12" stroke="currentColor" stroke-width="1" fill="none" />
+            <circle cx="90" cy="12" r="3" fill="currentColor" />
+            <path d="M118 12 H180" stroke="currentColor" stroke-width="1" />
+          </svg>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--dark menu-page">
       <div class="container">
-        <p class="section-note" style="margin-bottom: var(--space-lg);">Sélection indicative — carte complète à confirmer avec l'établissement.</p>
+        <p class="section-note">Les prix peuvent varier entre la carte sur place et les plateformes de commande.</p>
 
-        <div class="menu-row">
-          <div class="menu-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/breakfast-table-01.jpg" width="816" height="1280" loading="lazy" alt="Table de petit-déjeuner dressée chez Caramelio" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+        <div class="menu-controls">
+          <div class="menu-controls__toggles">
+            <button type="button" class="menu-toggle is-active" data-menu-toggle="sur-place">Carte sur place</button>
+            <button type="button" class="menu-toggle" data-menu-toggle="en-ligne">Menu en ligne</button>
           </div>
-          <div class="menu-category">
-            <h2 class="menu-category__title">Petit-déjeuner</h2>
-            <div class="menu-items">
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Formule Caramelio</span>
-                  <span class="menu-item__desc">Viennoiserie, jus frais, boisson chaude.</span>
-                </div>
-                <span class="menu-item__price">Prix sur place</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Œufs façon villa</span>
-                  <span class="menu-item__desc">Préparation du jour, pain maison.</span>
-                </div>
-                <span class="menu-item__price">Prix sur place</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Bol gourmand</span>
-                  <span class="menu-item__desc">Fruits de saison, granola, miel.</span>
-                </div>
-                <span class="menu-item__price">Prix sur place</span>
-              </div>
-            </div>
+          <div class="menu-controls__search">
+            <input type="search" id="menu-search" class="menu-search" placeholder="Rechercher un plat…" aria-label="Rechercher un plat" />
           </div>
         </div>
 
-        <div class="menu-row">
-          <div class="menu-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/dessert-classique-01.jpg" width="1038" height="1280" loading="lazy" alt="Pâtisserie classique Caramelio, biscuit noisette et crème amande" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div class="menu-category">
-            <h2 class="menu-category__title">Pâtisserie</h2>
+        <nav class="menu-nav" aria-label="Catégories de la carte">
+          <a href="#sur-place">Sur place</a>
+          <a href="#petit-dejeuner">Petit Déjeuner</a>
+          <a href="#boissons">Boissons</a>
+          <a href="#pizzas-sur-place">Pizzas</a>
+          <a href="#tacos-sandwichs">Tacos &amp; Sandwichs</a>
+          <a href="#salades">Salades</a>
+          <a href="#pates-sur-place">Pâtes</a>
+          <a href="#plats">Plats</a>
+          <a href="#couscous">Couscous</a>
+          <a href="#burgers">Burgers</a>
+          <a href="#desserts">Desserts</a>
+          <a href="#en-ligne">En ligne</a>
+        </nav>
+
+        <div class="menu-part" data-menu-part="sur-place" id="part-sur-place">
+        <h2 class="menu-section-heading section-title" id="sur-place">Carte sur place</h2>
+
+        <details class="menu-group" id="petit-dejeuner" open>
+          <summary><span>Petit Déjeuner</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Carte sur place</h3>
             <div class="menu-items">
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Pâtisserie maison du jour</span>
-                  <span class="menu-item__desc">Sélection selon l'inspiration du chef pâtissier.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Douceur signature Caramelio</span>
-                  <span class="menu-item__desc">Une création propre à la maison.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Café gourmand</span>
-                  <span class="menu-item__desc">Café accompagné d'une mignardise.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
+              <div class="menu-item"><span class="menu-item__name">Continental</span><span class="menu-item__price">32 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Anglais</span><span class="menu-item__price">32 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Beldi</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Américain</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Fassi</span><span class="menu-item__price">42 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Amazigh</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Four Chamali</span><span class="menu-item__price">52 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Complet</span><span class="menu-item__price">52 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Caramelio</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Canadien</span><span class="menu-item__price">80 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Carte noire</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Continental</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Anglais</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Beldi</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Américain</span><span class="menu-item__price">42 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Fassi</span><span class="menu-item__price">48 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Amazigh</span><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Four Chamali</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Complet</span><span class="menu-item__price">58 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Caramelio</span><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Canadien</span><span class="menu-item__price">88 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">PDI gourmand</span><span class="menu-item__price">118 dh</span></div>
             </div>
           </div>
+        </details>
+
+        <details class="menu-group" id="omelettes">
+          <summary><span>Omelettes</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Carte sur place</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Omelette nature</span><span class="menu-item__price">17 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette aux champignons</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette fromage</span><span class="menu-item__price">24 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette jambon</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette khlii</span><span class="menu-item__price">26 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette aux crevettes</span><span class="menu-item__price">29 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">À la carte</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Omelette nature</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette aux crevettes</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette au fruit de mer</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette sauce tomate</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette aux champignons</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette jambon</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette au fromage</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette Espagnole</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Omelette Khlii</span><span class="menu-item__price">26 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="supplements">
+          <summary><span>Suppléments</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Msemen</span><span class="menu-item__price">7 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Harcha</span><span class="menu-item__price">7 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jben</span><span class="menu-item__price">5 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Amlou</span><span class="menu-item__price">13 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Yaourt</span><span class="menu-item__price">10 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Beurre</span><span class="menu-item__price">5 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Argan</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Miel</span><span class="menu-item__price">6 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Huile d'olive</span><span class="menu-item__price">7 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Olives noires</span><span class="menu-item__price">5 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Confiture</span><span class="menu-item__price">6 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="viennoiseries">
+          <summary><span>Viennoiseries</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Croissant simple</span><span class="menu-item__price">6 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pain au chocolat</span><span class="menu-item__price">8 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Croissant fourré</span><span class="menu-item__price">8 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Schneck / pain aux raisins</span><span class="menu-item__price">7 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Croissant crème d'amande</span><span class="menu-item__price">9 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Chausson</span><span class="menu-item__price">12 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Harcha farci</span><span class="menu-item__price">12 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Msemmen farci</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Toast au fromage</span><span class="menu-item__price">12 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pain farci</span><span class="menu-item__price">13 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Marocaine</span><span class="menu-item__price">15 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="boissons">
+          <summary><span>Boissons</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Boissons chaudes — ancienne carte</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Espresso</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Allongé</span><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Café crème</span><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Lait chaud</span><span class="menu-item__price">12 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Cappuccino</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cappuccino Hills Bros</span><span class="menu-item__desc">Vanille, chocolat cookies, noisettes, caramel</span></div><span class="menu-item__price">27 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Nespresso</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Nespresso au lait</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Chocolat au lait</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Chocolat à l'ancienne</span><span class="menu-item__price">27 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Mezzo Mezzo</span><span class="menu-item__price">32 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé à la menthe</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé noir</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé noir au lait</span><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Thés aromatisés</span><span class="menu-item__desc">Vanille, pêche, camomille, jasmin</span></div><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Verveine</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Verveine au lait</span><span class="menu-item__price">18 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Boissons chaudes — carte récente</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Espresso</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Nespresso</span><span class="menu-item__price">24 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Double espresso</span><span class="menu-item__price">26 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Américain</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Moitié Moitié</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Nespresso au lait</span><span class="menu-item__price">24 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Café crème</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Cappuccino</span><span class="menu-item__price">24 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Cappuccino Viennois</span><span class="menu-item__price">27 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Lait chaud ou froid</span><span class="menu-item__price">17 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Chocolat chaud</span><span class="menu-item__price">22 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Chocolat à l'ancienne</span><span class="menu-item__price">32 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Latte macchiato aromatisé</span><span class="menu-item__desc">Vanille, caramel, noisette</span></div><span class="menu-item__price">28 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé à la menthe</span><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé spécial</span><span class="menu-item__price">19 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Verveine au choix</span><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé noir au choix</span><span class="menu-item__price">18 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Boissons fraîches</h3>
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Thé glacé</span><span class="menu-item__desc">Pêche ou citron</span></div><span class="menu-item__price">18 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Frappuccino noisette</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Frappuccino chocolat cookies</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Frappuccino vanille</span><span class="menu-item__price">25 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Piña colada</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Oreo Latte</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Virgin mojito</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Eau minérale 1,5L</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Eau minérale 0,5L</span><span class="menu-item__price">11 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Eau gazeuse 1L</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Eau gazeuse 0,5L</span><span class="menu-item__price">13 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Soda</span><span class="menu-item__price">15 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Lait froid</span><span class="menu-item__price">10 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="salades">
+          <summary><span>Salades</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">César Pollo</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Avocat aux crevettes</span><span class="menu-item__price">60 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Salade marocaine</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Niçoise</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Salade pêcheur</span><span class="menu-item__price">80 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Salade mexicaine</span><span class="menu-item__price">70 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="tacos-sandwichs">
+          <summary><span>Tacos &amp; Sandwichs</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Tacos</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Tacos poulet</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tacos viande hachée</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tacos mixte</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tacos Cordon Bleu</span><span class="menu-item__price">45 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Sauces</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Sauce algérienne</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sauce aux fromages</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sauce barbecue</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sauce biggy</span></div>
+            </div>
+            <h3 class="menu-subheading">Sandwichs</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Sandwich thon</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sandwich poulet</span><span class="menu-item__price">33 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sandwich viande hachée</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sandwich crevettes</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sandwich mixte Caramelio</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sandwich Caramelio</span><span class="menu-item__price">45 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Panini</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Panini fromage</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Panini poulet</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Panini thon</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Panini viande hachée</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Panini crevette</span><span class="menu-item__price">43 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="burgers">
+          <summary><span>Burgers</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Carte sur place</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Chicken burger</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Cheese burger</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Burger Américain</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Burger Caramelio</span><span class="menu-item__desc">Viande hachée, œuf, laitue, tomate, fromage, cornichon, oignon, jambon de dinde fumée</span></div><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Double Cheese burger</span><span class="menu-item__price">55 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Menu enfant</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Kids burger</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Nugget poulet</span><span class="menu-item__price">55 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="pizzas-sur-place">
+          <summary><span>Pizzas</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Pizza Margherita</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Végétarienne</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza au poulet</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza au thon</span><span class="menu-item__price">42 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Viande Hachée</span><span class="menu-item__price">43 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza quatre saison</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza quatre fromages</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Fruit de Mer</span><span class="menu-item__price">48 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Caramelio</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pizza Napolitaine</span><span class="menu-item__price">55 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="pates-sur-place">
+          <summary><span>Pâtes</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Bolognaise</span><span class="menu-item__price">49 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Carbonara</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Alfredo</span><span class="menu-item__price">62 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Fruits de Mer</span><span class="menu-item__price">68 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Lasagnes bolognaise</span><span class="menu-item__price">60 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="plats">
+          <summary><span>Plats</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Tajines</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Tajine Viande Hachée</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tajine Poulet au Citron</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tajine Crevette Pil Pil</span><span class="menu-item__price">48 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tajine Crevettes à la Provençale</span><span class="menu-item__price">48 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Gratin et lasagne</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Gratin Poulet</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Lasagne Bolognaise</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Gratin Fruit de Mer</span><span class="menu-item__price">55 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Gratins — autre page</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Gratin au poulet</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Gratin au fruit de mer</span><span class="menu-item__price">60 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Carte sur place</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Brochettes de Merguez</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Brochettes de Poulet</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Escalope de poulet pané</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Brochettes de Bœuf</span><span class="menu-item__price">60 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Émincé de Poulet à la crème et aux champignons</span><span class="menu-item__price">60 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Plat de Viande Hachée (300g)</span><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Suprême de poulet à la Crème</span><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Côte d'Agneau (300g)</span><span class="menu-item__price">70 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Émincé de Bœuf à la crème et aux champignons</span><span class="menu-item__price">70 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Cordon Bleu Poulet</span><span class="menu-item__price">70 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Entrecôte Grillée</span><span class="menu-item__price">75 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Filet de Bœuf Sauce Champignon (250g)</span><span class="menu-item__price">75 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Brochettes Mix</span><span class="menu-item__price">120 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Émincé de Poulet</span><span class="menu-item__price">80 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Poulet Grillé</span><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Filet de Bœuf</span><span class="menu-item__price">85 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pavé de Saumon</span><span class="menu-item__price">150 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Entrecôte</span><span class="menu-item__price">95 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Suprême de Poulet</span><span class="menu-item__price">65 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Traditionnelle</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Tajine Poulet Citron</span><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tanjia Marrakchia</span><span class="menu-item__price">85 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Poissons</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Filet de Saint-Pierre grillé</span><span class="menu-item__price">60 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Filet de Rouget</span><span class="menu-item__price">90 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Filet de Rascasse</span><span class="menu-item__price">80 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pavé de Saumon (250g)</span><span class="menu-item__price">120 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="desserts">
+          <summary><span>Crêpes &amp; Desserts</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <h3 class="menu-subheading">Crêpes salées</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Fromage</span><span class="menu-item__price">30 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jambon</span><span class="menu-item__price">32 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Poulet champignons</span><span class="menu-item__price">42 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Viande hachée</span><span class="menu-item__price">45 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Saumon fumé</span><span class="menu-item__price">50 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Crêpes sucrées</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Nutella</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Banane</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Oreo</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tropical</span><span class="menu-item__price">50 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Praline</span><span class="menu-item__desc">Avec boule de glace</span></div><span class="menu-item__price">60 dh</span></div>
+            </div>
+            <h3 class="menu-subheading">Pancakes</h3>
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Nutella</span><span class="menu-item__price">35 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Banane</span><span class="menu-item__price">38 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Tropical</span><span class="menu-item__price">40 dh</span></div>
+            </div>
+          </div>
+        </details>
+
         </div>
 
-        <div class="menu-row">
-          <div class="menu-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/counter-01.jpg" width="814" height="1280" loading="lazy" alt="Le comptoir de Caramelio, préparation des boissons" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div class="menu-category">
-            <h2 class="menu-category__title">Boissons &amp; cocktails</h2>
-            <div class="menu-items">
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Café Caramelio</span>
-                  <span class="menu-item__desc">Espresso ou allongé, torréfaction sélectionnée.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Jus frais pressés</span>
-                  <span class="menu-item__desc">Fruits de saison, sans additifs.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Cocktail signature</span>
-                  <span class="menu-item__desc">Créations maison, avec ou sans alcool.</span>
-                </div>
-                <span class="menu-item__price">Selon la carte</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="menu-part" data-menu-part="en-ligne" id="part-en-ligne" hidden>
+        <h2 class="menu-section-heading section-title" id="en-ligne">Menu en ligne / Livraison</h2>
 
-        <div class="menu-row">
-          <div class="menu-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/kids-cake-02.jpg" width="965" height="1280" loading="lazy" alt="Gâteau enfant Caramelio, décor coloré" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div class="menu-category">
-            <h2 class="menu-category__title">Enfants</h2>
+        <details class="menu-group" id="tacos-en-ligne">
+          <summary><span>Tacos</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
             <div class="menu-items">
-              <div class="menu-item">
-                <div>
-                  <span class="menu-item__name">Menu enfant</span>
-                  <span class="menu-item__desc">Formule adaptée, mentionnée sur la fiche établissement.</span>
-                </div>
-                <span class="menu-item__price">Prix sur place</span>
-              </div>
+              <div class="menu-item"><div><span class="menu-item__name">Tacos Poulet</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">58 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tacos Viande Hachée</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">59 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tacos Nuggets</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">69 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tacos Caramelio</span><span class="menu-item__desc">Poulet, viande hachée, nuggets, cordon bleu avec frites</span></div><span class="menu-item__price">75 dh</span></div>
             </div>
           </div>
+        </details>
+
+        <details class="menu-group" id="sandwichs-en-ligne">
+          <summary><span>Sandwichs</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Sandwich Poulet</span><span class="menu-item__desc">Avec salade, tomate et frites</span></div><span class="menu-item__price">62 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Caramelio Steak</span><span class="menu-item__desc">Steak haché, jambon, œuf, salade, tomate, oignon</span></div><span class="menu-item__price">71 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Sandwich Viande Hachée</span><span class="menu-item__desc">Avec salade, tomate et frites</span></div><span class="menu-item__price">62 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Sandwich Crespy</span><span class="menu-item__desc">Avec salade, tomate et frites, poulet crispy, jambon</span></div><span class="menu-item__price">58 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="salades-en-ligne">
+          <summary><span>Les Salades</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Salade César</span><span class="menu-item__desc">Salade, tomate, anchois, poulet, croûtons, œufs, fromage parmesan</span></div><span class="menu-item__price">67 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Salade Pêcheur</span><span class="menu-item__desc">Saumon fumé, crevettes, calamars, moules, maïs, mangue, avocat, concombre</span></div><span class="menu-item__price">105 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Salade Niçoise</span><span class="menu-item__desc">Salade romaine, pommes de terre, haricots verts, tomates, oignons, poivrons, riz rouge, maïs, concombre, thon, œufs de caille, olives noires</span></div><span class="menu-item__price">65 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="jus-sodas">
+          <summary><span>Jus et sodas</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Jus de Fraise</span><span class="menu-item__price">47 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus d'orange</span><span class="menu-item__price">28 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus d'avocat</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Sprite 33cl</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Pom's 33cl</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus de Carotte Orange</span><span class="menu-item__price">33 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus de Pomme</span><span class="menu-item__price">33 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus de Mangue</span><span class="menu-item__price">40 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Hawaï Tropical 33cl</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Coca Cola Zéro 33cl</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus de Banane</span><span class="menu-item__price">33 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Coca Cola Classique 33cl</span><span class="menu-item__price">20 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus d'ananas</span><span class="menu-item__price">47 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Jus de Citron</span><span class="menu-item__price">33 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="couscous">
+          <summary><span>Couscous</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Couscous Poulet</span><span class="menu-item__desc">Couscous + lben</span></div><span class="menu-item__price">75 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Couscous Végétarien</span><span class="menu-item__desc">Couscous + lben</span></div><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Couscous Viande</span><span class="menu-item__desc">Couscous + lben</span></div><span class="menu-item__price">82 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="quesadilla">
+          <summary><span>Quesadilla Mexican</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Quesadilla Aux Fruit de Mer</span><span class="menu-item__desc">Fruits de mer, fromage, sauce quésadilla, oignons, tomate, poivron, maïs</span></div><span class="menu-item__price">74 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Quesadilla Au Thon</span><span class="menu-item__desc">Thon, fromage, sauce quésadilla, oignons, tomate, poivron, maïs</span></div><span class="menu-item__price">55 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Quesadilla Au Poulet</span><span class="menu-item__desc">Poulet, fromage, sauce quésadilla, oignons, tomate, poivron, maïs</span></div><span class="menu-item__price">59 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="pates-en-ligne">
+          <summary><span>Pâtes</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Pâtes À La Carbonara</span><span class="menu-item__desc">Bacon de bœuf, crème, parmesan</span></div><span class="menu-item__price">67 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pâtes Fruit De Mer</span><span class="menu-item__desc">Fruits de mer, crème fraîche</span></div><span class="menu-item__price">74 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pâtes Thon</span><span class="menu-item__desc">Thon, câpres, oignon, crème fraîche, ail</span></div><span class="menu-item__price">81 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pâtes Bolognaise</span><span class="menu-item__desc">Sauce tomate classique parfumée avec viande hachée</span></div><span class="menu-item__price">60 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pâtes Poulet</span><span class="menu-item__desc">Crème fraîche, poulet, pesto, basilic, parmesan</span></div><span class="menu-item__price">60 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="plats-en-ligne">
+          <summary><span>Les Plats</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Filet De Bœuf</span><span class="menu-item__desc">Filet bœuf, 2 accompagnements</span></div><span class="menu-item__price">128 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cordon Bleu</span><span class="menu-item__desc">Cordon bleu, 2 accompagnements</span></div><span class="menu-item__price">99 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Mixte Grille</span><span class="menu-item__desc">Poulet, merguez, côte d'agneau</span></div><span class="menu-item__price">135 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Chicken Parmigiana</span><span class="menu-item__desc">Poulet pané parmigiana, 2 accompagnements</span></div><span class="menu-item__price">89 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Brochettes Mix</span><span class="menu-item__desc">Poulet, agneau, bœuf, merguez, riz, légumes</span></div><span class="menu-item__price">99 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Brochettes De Viande Hachée</span><span class="menu-item__desc">Viande hachée, 2 accompagnements</span></div><span class="menu-item__price">94 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Poulet Grillé</span><span class="menu-item__desc">1/4 poulet grillé, 2 accompagnements</span></div><span class="menu-item__price">99 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Émincé De Poulet</span><span class="menu-item__desc">Poulet, 2 accompagnements</span></div><span class="menu-item__price">89 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="petit-dejeuner-en-ligne">
+          <summary><span>Petit Déjeuner</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Petit Déjeuner EXPRESS</span><span class="menu-item__desc">Panier varié de pain et viennoiseries avec assiette de tartine et corn flakes, boisson chaude, orange ou carotte</span></div><span class="menu-item__price">62 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Petit Déjeuner Beldi</span><span class="menu-item__desc">Msemen, harcha, beghrir, assiette de tartine, œuf dur, corn flakes, yaourt maison, boisson chaude, orange ou carotte</span></div><span class="menu-item__price">76 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Petit Déjeuner Fassi</span><span class="menu-item__desc">Poêle au khliâa, 2 msemen avec assiette de tartine, yaourt maison, boisson chaude, orange ou carotte</span></div><span class="menu-item__price">86 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Petit Déjeuner Chamali</span><span class="menu-item__desc">Omelette avec assiette chamali, avocat, jban, olives, charcuterie, fromage rouge, huile d'olive, boisson chaude, yaourt maison, orange ou carotte</span></div><span class="menu-item__price">93 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Anglais</span><span class="menu-item__desc">Œufs au plat sur toast, jambon, fromage rouge, tomate tartinée avec jben, merguez, potatoes, concombre, salade, olives noires, granola, boisson chaude, jus de fruits frais</span></div><span class="menu-item__price">105 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="boissons-chaudes-en-ligne">
+          <summary><span>Boissons Chaudes</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><span class="menu-item__name">Café crème</span><span class="menu-item__price">26 dh</span></div>
+              <div class="menu-item"><span class="menu-item__name">Thé à la menthe</span><span class="menu-item__price">24 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="pastitsio">
+          <summary><span>Pastitsio</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Pasticcio Caramelio</span><span class="menu-item__desc">Poulet, cordon bleu, viande hachée</span></div><span class="menu-item__price">85 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pasticcio Viande Haché</span><span class="menu-item__desc">Crème fraîche, viande hachée, frite, penne, mozzarella</span></div><span class="menu-item__price">65 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pasticcio Jambon</span><span class="menu-item__desc">Crème fraîche, jambon, frite, penne, mozzarella</span></div><span class="menu-item__price">46 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pasticcio Poulet</span><span class="menu-item__desc">Crème fraîche, poulet, frite, penne, mozzarella</span></div><span class="menu-item__price">58 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="pizzas-en-ligne">
+          <summary><span>Pizzas</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Algérienne</span><span class="menu-item__desc">Sauce blanche, sauce algérienne, oignons, kefta</span></div><span class="menu-item__price">79 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Fruit De Mer</span><span class="menu-item__desc">Sauce tomate mozzarella, fruits de mer, olives noires</span></div><span class="menu-item__price">87 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Poulet</span><span class="menu-item__desc">Sauce tomate, mozzarella, poulet, champignons</span></div><span class="menu-item__price">76 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Thon</span><span class="menu-item__desc">Sauce tomate, mozzarella, origan, thon, olives noires</span></div><span class="menu-item__price">69 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Alfredo</span><span class="menu-item__desc">Sauce blanche, poulet, champignons</span></div><span class="menu-item__price">84 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Quatre Saisons</span><span class="menu-item__desc">1/4 champignon, 1/4 chicken, 1/4 pêcheur, 1/4 thon</span></div><span class="menu-item__price">80 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Quatre Fromages</span><span class="menu-item__desc">Sauce tomate, mozzarella, origan, quatre fromages</span></div><span class="menu-item__price">83 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Margherita</span><span class="menu-item__desc">Sauce tomate, mozzarella, olives noires</span></div><span class="menu-item__price">49 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Viande Hachée</span><span class="menu-item__desc">Sauce tomate, viande hachée, mozzarella, olives noires</span></div><span class="menu-item__price">78 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Pizza Végétarienne</span><span class="menu-item__desc">Sauce tomate, mozzarella, origan, légumes grillés</span></div><span class="menu-item__price">57 dh</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="menu-group" id="burgers-en-ligne">
+          <summary><span>Burgers</span><span class="menu-group__icon" aria-hidden="true">+</span></summary>
+          <div class="menu-group__body">
+            <div class="menu-items">
+              <div class="menu-item"><div><span class="menu-item__name">Chicken Burger</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">57 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Double Burger</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">79 dh</span></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cheeseburger</span><span class="menu-item__desc">Servi avec frites</span></div><span class="menu-item__price">58 dh</span></div>
+            </div>
+          </div>
+        </details>
+
         </div>
 
         <div class="menu-cta">
-          <h2 class="section-title">Envie de réserver un moment ?</h2>
+          <h2 class="section-title">Envie de commander ?</h2>
           <p class="section-subtitle" style="margin-inline:auto;">Commandez sur Glovo ou appelez directement l'établissement.</p>
           <div class="hero__actions" style="justify-content:center; margin-top: var(--space-md);">
             <a class="btn btn-primary" href="#" aria-label="Commander sur Glovo (lien à remplacer par l'URL réelle)">Commander sur Glovo</a>
@@ -189,24 +631,15 @@
   </main>
 
   <footer class="site-footer">
-    <video class="site-footer__media" autoplay muted loop playsinline preload="metadata" poster="assets/images/villa-ambience-poster.jpg" aria-hidden="true">
-      <source src="assets/videos/villa-ambience-01.mp4" type="video/mp4" />
-    </video>
-    <img class="site-footer__media site-footer__poster-fallback" src="assets/images/villa-ambience-poster.jpg" width="560" height="848" alt="" aria-hidden="true" loading="lazy" />
-    <div class="site-footer__media-scrim" aria-hidden="true"></div>
     <div class="site-footer__bg" aria-hidden="true"></div>
-    <div class="site-footer__statement">
-      <p>Une escale élégante à Targa, entre pâtisserie et art de vivre.</p>
-    </div>
-    <div class="container site-footer__top">
-      <div class="site-footer__brand-block">
-        <span class="site-header__wordmark">Caramelio</span>
-        <p class="site-footer__tagline">Café · Pâtisserie · Breakfast — une adresse villa à Targa, Marrakech.</p>
-      </div>
 
-      <div>
-        <p class="site-footer__heading">Explorer</p>
-        <ul class="site-footer__list">
+    <div class="container site-footer__giant-wrap">
+      <span class="site-footer__giant">Caramelio</span>
+    </div>
+
+    <div class="container site-footer__cols">
+      <div class="site-footer__col">
+        <ul class="site-footer__nav-list">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="carte.html">Carte</a></li>
           <li><a href="galerie.html">Galerie</a></li>
@@ -215,37 +648,22 @@
         </ul>
       </div>
 
-      <div>
+      <div class="site-footer__col">
         <p class="site-footer__heading">Nous trouver</p>
-        <ul class="site-footer__list">
-          <li><address>JXX2+63R<br />Targa, Marrakech</address></li>
-          <li><a href="tel:+212524490595">05 24 49 05 95</a></li>
-          <li><a href="#" aria-label="Commander sur Glovo (lien à remplacer par l'URL réelle)">Commander sur Glovo</a></li>
-        </ul>
+        <address class="site-footer__address">JXX2+63R<br />Targa, Marrakech</address>
+        <a class="site-footer__phone" href="tel:+212524490595">05 24 49 05 95</a>
+        <a class="site-footer__insta" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">@carameliotarga</a>
       </div>
 
-      <div>
-        <p class="site-footer__heading">Horaires</p>
-        <ul class="site-footer__list">
-          <li>Ouvert jusqu'à 23:00</li>
-          <li>Horaires indicatifs — à confirmer</li>
-        </ul>
-        <p class="site-footer__heading" style="margin-top: var(--space-md);">Suivre</p>
-        <ul class="site-footer__list">
-          <li><a href="#" aria-label="Instagram (lien de démonstration)">Instagram</a></li>
-          <li><a href="#" aria-label="Facebook (lien de démonstration)">Facebook</a></li>
-        </ul>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Caramelio</p>
+        <p class="site-footer__editorial">Pâtisserie raffinée.<br />Ambiance élégante.<br />Saveurs généreuses.</p>
       </div>
     </div>
 
-    <p class="site-footer__disclaimer">Concept de site web proposé pour Caramelio — non officiel.</p>
-
-    <div class="container site-footer__bottom">
-      <span>&copy; 2026 Caramelio — Proposition Yahya Studio.</span>
-      <div class="site-footer__legal">
-        <a href="contact.html">Itinéraire</a>
-        <a href="tel:+212524490595">Appeler</a>
-      </div>
+    <div class="container site-footer__bottom-row">
+      <span>Ouvert jusqu'à 23:00</span>
+      <span>Concept de site web proposé pour Caramelio — non officiel.</span>
     </div>
   </footer>
 

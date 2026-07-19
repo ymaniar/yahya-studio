@@ -1643,41 +1643,374 @@ body.home .site-footer {
   gap: var(--space-md) var(--space-lg);
 }
 
+/* Carte page: dark espresso rebuild (ticket #21). .menu-item / .menu-group /
+   .menu-nav / .menu-subheading / .menu-section-heading are exclusive to
+   carte.html, so these are edited directly (no scoping needed). */
+
+body.carte {
+  --brown-dark: #20160f;
+  --brown-deep: #120b07;
+  --cream: #f7efe3;
+  --cream-muted: #cfc2b1;
+  --gold-border: rgba(201, 164, 92, 0.35);
+}
+
+body.carte .site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: rgba(18, 11, 7, 0.68);
+  border-bottom-color: transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+body.carte .site-header.is-scrolled {
+  background: rgba(18, 11, 7, 0.94);
+  border-bottom-color: rgba(201, 164, 92, 0.18);
+}
+
+@media (min-width: 861px) {
+  body.carte .site-header__inner {
+    position: relative;
+  }
+
+  body.carte .site-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 860px) {
+  body.carte .site-header__actions {
+    margin-top: 0;
+  }
+}
+
+body.carte .page-hero {
+  padding-block: clamp(9rem, 13vw, 11.5rem) clamp(4rem, 6vw, 5.5rem);
+}
+
+body.carte .page-hero__bg {
+  background: none;
+}
+
+/* Same photo, better art direction: pull the focal point away from the
+   busiest/most cluttered area of the table so the calmer part of the
+   frame sits behind the centered text. */
+body.carte .page-hero__photo {
+  object-position: 50% 28%;
+}
+
+body.carte .page-hero__scrim {
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 46%, rgba(18, 11, 7, 0.58) 0%, rgba(18, 11, 7, 0) 72%),
+    linear-gradient(180deg, rgba(18, 11, 7, 0.4) 0%, rgba(18, 11, 7, 0.26) 38%, rgba(18, 11, 7, 0.66) 100%);
+}
+
+/* Remove the shared scanline/sheen texture effects on this page only —
+   the hero must show only the real photo + a soft brown vignette. */
+body.carte .page-hero__bg::after {
+  display: none;
+}
+
+body.carte .page-hero::before {
+  display: none;
+}
+
+body.carte .page-hero__title::after {
+  display: none;
+}
+
+body.carte .page-hero__subtitle {
+  max-width: 46ch;
+  margin-top: var(--space-lg);
+}
+
+body.carte .page-hero__ornament {
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 680px) {
+  body.carte .page-hero__photo {
+    object-position: 50% 20%;
+  }
+}
+
+.page-hero__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-lg) auto 0;
+  color: var(--color-gold-soft);
+}
+
+.ornament-line {
+  width: 64px;
+  height: 1px;
+  background: currentColor;
+}
+
+.ornament-mark {
+  flex-shrink: 0;
+  width: min(180px, 42vw);
+  height: auto;
+}
+
+.menu-page {
+  background: linear-gradient(180deg, var(--brown-dark) 0%, var(--brown-deep) 100%);
+  padding-block: clamp(4rem, 6vw, 6rem);
+}
+
+.menu-page .section-note {
+  color: var(--text-on-dark-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* Sticky controls: toggles + search */
+
+.menu-controls {
+  position: sticky;
+  top: 78px;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  background: rgba(18, 11, 7, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.menu-controls__toggles {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.menu-toggle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border-gold);
+  border-radius: 999px;
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.menu-toggle.is-active,
+.menu-toggle:hover {
+  color: var(--brown-deep);
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.menu-controls__search {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.menu-search {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-cream);
+  background: transparent;
+  border: 1px solid var(--color-border-gold);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+}
+
+.menu-search::placeholder {
+  color: var(--text-on-dark-muted);
+}
+
+.menu-search:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
 .menu-item {
   display: flex;
   justify-content: space-between;
   gap: var(--space-sm);
-  padding-bottom: var(--space-sm);
-  border-bottom: 1px dashed var(--color-border);
+  padding: 0.55rem 0.4rem;
+  border-bottom: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-sm);
+  transition: background var(--duration) var(--ease);
+}
+
+.menu-item:hover {
+  background: rgba(201, 164, 92, 0.06);
+}
+
+.menu-item.is-hidden {
+  display: none;
 }
 
 .menu-item__name {
   font-family: var(--font-serif);
   font-size: 1.05rem;
+  color: var(--color-cream);
 }
 
 .menu-item__desc {
   display: block;
   font-size: 0.85rem;
-  color: var(--text-on-cream-muted);
+  color: var(--text-on-dark-muted);
   margin-top: 0.25rem;
 }
 
 .menu-item__price {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--color-caramel);
+  color: var(--color-gold-soft);
   white-space: nowrap;
   font-size: 0.9rem;
 }
 
+/* Category nav (jump links) */
+
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border-gold);
+}
+
+.menu-nav a {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border-gold);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.menu-nav a:hover {
+  color: var(--brown-deep);
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+/* "Carte sur place" / "Menu en ligne" section breaks */
+
+.menu-section-heading {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-gold);
+}
+
+.menu-section-heading:first-of-type {
+  margin-top: 0;
+}
+
+/* Collapsible category groups (native <details>, always in the DOM,
+   keyboard + screen-reader accessible without extra JS) */
+
+.menu-group {
+  background: rgba(247, 239, 227, 0.03);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.menu-group.is-hidden {
+  display: none;
+}
+
+.menu-group summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  transition: color var(--duration) var(--ease);
+  color: var(--color-cream);
+}
+
+.menu-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-group summary:hover,
+.menu-group summary:focus-visible {
+  color: var(--color-gold);
+}
+
+.menu-group__icon {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-gold);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  transition: transform var(--duration) var(--ease);
+}
+
+.menu-group[open] .menu-group__icon {
+  transform: rotate(45deg);
+}
+
+.menu-group__body {
+  margin-top: var(--space-md);
+}
+
+.menu-subheading {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border-bottom: 1px solid var(--color-border-gold);
+  padding-bottom: 0.5rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.menu-subheading:first-child {
+  margin-top: 0;
+}
+
 .menu-cta {
   text-align: center;
-  background: linear-gradient(160deg, var(--color-cream-soft), var(--color-cream));
+  background: linear-gradient(160deg, var(--page-cream), var(--cream));
   border: 1px solid var(--color-border-gold);
   border-radius: var(--radius-md);
   padding: var(--space-xl) var(--space-md);
   margin-top: var(--space-xl);
+}
+
+/* Small intentional cream break inside the dark menu section: force
+   light-background text colors regardless of the .section--dark ancestor */
+.menu-cta .section-title {
+  color: var(--text-on-cream);
+}
+
+.menu-cta .section-subtitle {
+  color: var(--text-on-cream-muted);
 }
 
 /* ---------- Contact page ---------- */
