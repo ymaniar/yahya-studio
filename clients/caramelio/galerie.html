@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L'atmosphère — Caramelio</title>
-  <meta name="description" content="Un aperçu visuel de Caramelio : villa, terrasse, salon, pâtisserie et gâteaux d'occasion. Site concept non officiel." />
+  <title>Galerie — Caramelio</title>
+  <meta name="description" content="Galerie Caramelio : terrasse, salon, pâtisserie et moments partagés à Targa, Marrakech. Site concept non officiel." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="galerie">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
   <header class="site-header">
@@ -25,10 +25,11 @@
           <li><a class="site-nav__link" href="occasions.html">Occasions</a></li>
           <li><a class="site-nav__link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="site-header__actions">
-          <a class="btn btn-outline-gold" href="contact.html">Itinéraire</a>
-        </div>
       </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn-outline-gold" href="contact.html">Itinéraire</a>
+      </div>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir/fermer le menu de navigation">
         <span class="nav-toggle__bar"></span>
@@ -44,144 +45,102 @@
       <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__scrim" aria-hidden="true"></div>
       <div class="container">
-        <p class="page-hero__eyebrow">Targa · Marrakech</p>
-        <h1 class="page-hero__title">L'atmosphère</h1>
-        <p class="page-hero__subtitle">Villa, terrasse, salon, pâtisserie et gâteaux d'occasion — un aperçu de l'ambiance Caramelio, en images.</p>
+        <p class="page-hero__eyebrow">Galerie</p>
+        <h1 class="page-hero__title">L'univers Caramelio.</h1>
+        <p class="page-hero__subtitle">Terrasse, salon, pâtisserie et moments partagés à Targa.</p>
+        <div class="page-hero__ornament" aria-hidden="true">
+          <svg class="ornament-mark" width="180" height="24" viewBox="0 0 180 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12 H62" stroke="currentColor" stroke-width="1" />
+            <path d="M62 12 C68 4, 76 4, 82 12 C86 17.5, 91 19.5, 96 19.5" stroke="currentColor" stroke-width="1" fill="none" />
+            <path d="M84 19.5 C89 19.5, 94 17.5, 98 12 C104 4, 112 4, 118 12" stroke="currentColor" stroke-width="1" fill="none" />
+            <circle cx="90" cy="12" r="3" fill="currentColor" />
+            <path d="M118 12 H180" stroke="currentColor" stroke-width="1" />
+          </svg>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="galerie-section">
       <div class="container">
-        <div class="editorial-row">
-          <div class="editorial-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/facade-street-01.jpg" width="820" height="1280" loading="lazy" alt="La villa Caramelio vue depuis la rue, à Targa" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div>
-            <p class="eyebrow">Villa</p>
-            <h2 class="section-title">La villa Caramelio</h2>
-            <p class="section-subtitle">Une architecture contemporaine à Targa, entre façade ouverte sur rue et jardins bas qui annoncent la terrasse.</p>
-          </div>
-        </div>
+        <div class="galerie-grid">
+          <figure class="galerie-grid__pastry">
+            <button type="button" class="galerie-tile" data-caption="Pâtisserie">
+              <img src="assets/images/pastry-box-01.jpg" width="1206" height="1198" loading="lazy" style="object-position: center 40%;" alt="Coffret de pâtisseries maison Caramelio" />
+            </button>
+            <figcaption class="galerie-caption">Pâtisserie</figcaption>
+          </figure>
 
-        <div class="editorial-row">
-          <div class="editorial-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/terrace-03.jpg" width="810" height="1280" loading="lazy" alt="La terrasse ombragée de Caramelio, tables et parasols" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div>
-            <p class="eyebrow">Terrasse</p>
-            <h2 class="section-title">La terrasse</h2>
-            <p class="section-subtitle">Ombre légère, tables espacées et un rythme tranquille, du petit-déjeuner jusqu'aux cocktails du soir.</p>
-          </div>
-        </div>
+          <figure>
+            <button type="button" class="galerie-tile" data-caption="Terrasse">
+              <img src="assets/images/terrace-01.jpg" width="816" height="1280" loading="lazy" style="object-position: center 35%;" alt="La terrasse de Caramelio à Targa" />
+            </button>
+            <figcaption class="galerie-caption">Terrasse</figcaption>
+          </figure>
 
-        <div class="editorial-row">
-          <div class="editorial-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/interior-booth-01.jpg" width="814" height="1280" loading="lazy" alt="Banquette du salon intérieur de Caramelio" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div>
-            <p class="eyebrow">Salon</p>
-            <h2 class="section-title">Le salon</h2>
-            <p class="section-subtitle">Des volumes de villa, une lumière douce et un décor pensé pour s'attarder, à l'abri du soleil de Marrakech.</p>
-          </div>
-        </div>
+          <figure class="galerie-grid__banner">
+            <button type="button" class="galerie-tile" data-caption="Caramelio">
+              <img src="assets/images/cake-display-01.jpg" width="1206" height="1198" loading="lazy" alt="Enseigne lumineuse Caramelio et pièce montée" />
+            </button>
+            <figcaption class="galerie-caption">Caramelio</figcaption>
+          </figure>
 
-        <div class="editorial-row">
-          <div class="editorial-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/pastry-box-02.jpg" width="1206" height="805" loading="lazy" alt="Coffret de pâtisseries assorties Caramelio" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div>
-            <p class="eyebrow">Pâtisserie</p>
-            <h2 class="section-title">La pâtisserie</h2>
-            <p class="section-subtitle">Une vitrine renouvelée au fil des jours, entre gourmandise, présentation et savoir-faire maison.</p>
-          </div>
-        </div>
+          <figure>
+            <button type="button" class="galerie-tile" data-caption="Salon">
+              <img src="assets/images/interior-booth-01.jpg" width="814" height="1280" loading="lazy" style="object-position: center 35%;" alt="Banquette du salon intérieur de Caramelio" />
+            </button>
+            <figcaption class="galerie-caption">Salon</figcaption>
+          </figure>
 
-        <div class="editorial-row">
-          <div class="editorial-row__visual editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-03.jpg" width="1033" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio, décor élégant" />
-            <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-            <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          </div>
-          <div>
-            <p class="eyebrow">Gâteaux</p>
-            <h2 class="section-title">Gâteaux d'occasion</h2>
-            <p class="section-subtitle">Mariages, anniversaires et créations sur mesure — une pièce pensée pour chaque célébration.</p>
-            <div class="hero__actions">
-              <a class="btn btn-outline" href="occasions.html">Voir toutes les créations</a>
-            </div>
-          </div>
+          <figure>
+            <button type="button" class="galerie-tile" data-caption="Petit déjeuner">
+              <img src="assets/images/breakfast-table-01.jpg" width="816" height="1280" loading="lazy" style="object-position: center 40%;" alt="Table de petit-déjeuner dressée chez Caramelio" />
+            </button>
+            <figcaption class="galerie-caption">Petit déjeuner</figcaption>
+          </figure>
+
+          <figure>
+            <button type="button" class="galerie-tile" data-caption="À table">
+              <img src="assets/images/interior-dining-02.jpg" width="813" height="1280" loading="lazy" style="object-position: center 40%;" alt="Salle à table de Caramelio" />
+            </button>
+            <figcaption class="galerie-caption">À table</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section--tight" aria-labelledby="social-heading">
+    <section class="section section--tight section--dark galerie-closing" aria-labelledby="galerie-closing-heading">
+      <img class="galerie-closing__photo" src="assets/images/interior-lounge-01.jpg" width="818" height="1280" alt="" aria-hidden="true" />
+      <div class="galerie-closing__scrim" aria-hidden="true"></div>
       <div class="container">
         <div class="section-heading section-heading--center">
-          <p class="eyebrow">Instagram</p>
-          <h2 class="section-title" id="social-heading">Moments de terrasse, douceurs et café.</h2>
+          <p class="eyebrow">Nous trouver</p>
+          <h2 class="section-title" id="galerie-closing-heading">Un moment chez Caramelio.</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">Retrouvez Caramelio à Targa, Marrakech.</p>
         </div>
-
-        <div class="insta-grid">
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : la terrasse de Caramelio">
-            <img class="insta-tile__art" src="assets/images/terrace-02.jpg" width="821" height="1280" loading="lazy" alt="La terrasse de Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : la salle à manger de Caramelio">
-            <img class="insta-tile__art" src="assets/images/interior-dining-01.jpg" width="818" height="1280" loading="lazy" alt="La salle à manger de Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : petit-déjeuner Caramelio">
-            <img class="insta-tile__art" src="assets/images/breakfast-table-02.jpg" width="1206" height="1208" loading="lazy" alt="Table de petit-déjeuner chez Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : pâtisserie maison">
-            <img class="insta-tile__art" src="assets/images/pastry-box-03.jpg" width="1016" height="1280" loading="lazy" alt="Coffret de pâtisserie maison Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : gâteau de mariage Caramelio">
-            <img class="insta-tile__art" src="assets/images/wedding-cake-01.jpg" width="1038" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-          <a class="insta-tile" href="#" aria-label="Voir sur Instagram (lien de démonstration) : dessert signature">
-            <img class="insta-tile__art" src="assets/images/dessert-plate-01.jpg" width="886" height="1280" loading="lazy" alt="Assiette de dessert signature Caramelio" />
-            <span class="insta-tile__icon" aria-hidden="true">＋</span>
-          </a>
-        </div>
-
-        <div class="insta-cta">
-          <a class="btn btn-outline" href="#" aria-label="Voir Instagram (lien de démonstration, à remplacer par le profil officiel)">Voir Instagram</a>
+        <div class="hero__actions" style="justify-content: center;">
+          <a class="btn btn-outline-gold" href="https://maps.app.goo.gl/qix5PMnD1qW1fJyQ9" target="_blank" rel="noopener noreferrer">Itinéraire</a>
+          <a class="btn btn-outline-inverse" href="contact.html">Nous contacter</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <video class="site-footer__media" autoplay muted loop playsinline preload="metadata" poster="assets/images/villa-ambience-poster.jpg" aria-hidden="true">
-      <source src="assets/videos/villa-ambience-01.mp4" type="video/mp4" />
-    </video>
-    <img class="site-footer__media site-footer__poster-fallback" src="assets/images/villa-ambience-poster.jpg" width="560" height="848" alt="" aria-hidden="true" loading="lazy" />
-    <div class="site-footer__media-scrim" aria-hidden="true"></div>
-    <div class="site-footer__bg" aria-hidden="true"></div>
-    <div class="site-footer__statement">
-      <p>Une escale élégante à Targa, entre pâtisserie et art de vivre.</p>
-    </div>
-    <div class="container site-footer__top">
-      <div class="site-footer__brand-block">
-        <span class="site-header__wordmark">Caramelio</span>
-        <p class="site-footer__tagline">Café · Pâtisserie · Breakfast — une adresse villa à Targa, Marrakech.</p>
-      </div>
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Fermer l'image">×</button>
+    <img class="lightbox__img" src="" alt="" />
+    <p class="lightbox__caption"></p>
+  </div>
 
-      <div>
-        <p class="site-footer__heading">Explorer</p>
-        <ul class="site-footer__list">
+  <footer class="site-footer">
+    <div class="site-footer__bg" aria-hidden="true"></div>
+
+    <div class="container site-footer__giant-wrap">
+      <span class="site-footer__giant">Caramelio</span>
+    </div>
+
+    <div class="container site-footer__cols">
+      <div class="site-footer__col">
+        <ul class="site-footer__nav-list">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="carte.html">Carte</a></li>
           <li><a href="galerie.html">Galerie</a></li>
@@ -190,37 +149,22 @@
         </ul>
       </div>
 
-      <div>
+      <div class="site-footer__col">
         <p class="site-footer__heading">Nous trouver</p>
-        <ul class="site-footer__list">
-          <li><address>JXX2+63R<br />Targa, Marrakech</address></li>
-          <li><a href="tel:+212524490595">05 24 49 05 95</a></li>
-          <li><a href="#" aria-label="Commander sur Glovo (lien à remplacer par l'URL réelle)">Commander sur Glovo</a></li>
-        </ul>
+        <address class="site-footer__address">JXX2+63R<br />Targa, Marrakech</address>
+        <a class="site-footer__phone" href="tel:+212524490595">05 24 49 05 95</a>
+        <a class="site-footer__insta" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">@carameliotarga</a>
       </div>
 
-      <div>
-        <p class="site-footer__heading">Horaires</p>
-        <ul class="site-footer__list">
-          <li>Ouvert jusqu'à 23:00</li>
-          <li>Horaires indicatifs — à confirmer</li>
-        </ul>
-        <p class="site-footer__heading" style="margin-top: var(--space-md);">Suivre</p>
-        <ul class="site-footer__list">
-          <li><a href="#" aria-label="Instagram (lien de démonstration)">Instagram</a></li>
-          <li><a href="#" aria-label="Facebook (lien de démonstration)">Facebook</a></li>
-        </ul>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Caramelio</p>
+        <p class="site-footer__editorial">Pâtisserie raffinée.<br />Ambiance élégante.<br />Saveurs généreuses.</p>
       </div>
     </div>
 
-    <p class="site-footer__disclaimer">Concept de site web proposé pour Caramelio — non officiel.</p>
-
-    <div class="container site-footer__bottom">
-      <span>&copy; 2026 Caramelio — Proposition Yahya Studio.</span>
-      <div class="site-footer__legal">
-        <a href="contact.html">Itinéraire</a>
-        <a href="tel:+212524490595">Appeler</a>
-      </div>
+    <div class="container site-footer__bottom-row">
+      <span>Ouvert jusqu'à 23:00</span>
+      <span>Concept de site web proposé pour Caramelio — non officiel.</span>
     </div>
   </footer>
 
