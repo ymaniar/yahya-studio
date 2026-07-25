@@ -1932,6 +1932,278 @@ body.galerie .page-hero__ornament {
   background: linear-gradient(180deg, rgba(18, 11, 7, 0.74) 0%, rgba(18, 11, 7, 0.84) 100%);
 }
 
+/* ---------- Occasions page: same dark Pistachio treatment as carte/galerie ---------- */
+
+body.occasions {
+  --brown-dark: #20160f;
+  --brown-deep: #120b07;
+  --cream: #f7efe3;
+  --cream-muted: #cfc2b1;
+  --gold-border: rgba(201, 164, 92, 0.35);
+}
+
+body.occasions .site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: rgba(18, 11, 7, 0.68);
+  border-bottom-color: transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+body.occasions .site-header.is-scrolled {
+  background: rgba(18, 11, 7, 0.94);
+  border-bottom-color: rgba(201, 164, 92, 0.18);
+}
+
+@media (min-width: 861px) {
+  body.occasions .site-header__inner {
+    position: relative;
+  }
+
+  body.occasions .site-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 860px) {
+  body.occasions .site-header__actions {
+    margin-top: 0;
+  }
+}
+
+body.occasions .page-hero {
+  padding-block: clamp(9rem, 13vw, 11.5rem) clamp(4rem, 6vw, 5.5rem);
+}
+
+body.occasions .page-hero__bg {
+  background: none;
+}
+
+body.occasions .page-hero__scrim {
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 46%, rgba(18, 11, 7, 0.55) 0%, rgba(18, 11, 7, 0) 72%),
+    linear-gradient(180deg, rgba(18, 11, 7, 0.4) 0%, rgba(18, 11, 7, 0.26) 38%, rgba(18, 11, 7, 0.66) 100%);
+}
+
+body.occasions .page-hero__bg::after {
+  display: none;
+}
+
+body.occasions .page-hero::before {
+  display: none;
+}
+
+body.occasions .page-hero__title::after {
+  display: none;
+}
+
+/* Ticket fix: the shared clamp(2.75rem, 6vw, 4.5rem) title ran edge-to-edge
+   on this page's phrase — a controlled max-width plus a smaller desktop
+   clamp keeps it off the sides and wraps it into balanced lines instead. */
+body.occasions .page-hero__title {
+  max-width: 640px;
+  margin-inline: auto;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+}
+
+body.occasions .page-hero__subtitle {
+  max-width: 46ch;
+  margin-top: var(--space-lg);
+}
+
+body.occasions .page-hero__ornament {
+  margin-top: var(--space-xl);
+}
+
+/* Every section below shares this dark espresso backdrop; each <section>
+   also carries .section--dark so the shared .section-title/.eyebrow/
+   .section-subtitle rules resolve to light colors instead of the
+   near-black-on-dark-brown text the previous page shipped with. */
+.occasions-section {
+  background: linear-gradient(180deg, var(--brown-dark) 0%, var(--brown-deep) 100%);
+}
+
+/* .section-note isn't covered by .section--dark (Carte gives it the same
+   fix for the same reason) — every occasions section is dark, so it needs
+   the light-muted color too, or the italic line disappears. */
+body.occasions .section-note {
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Category chapters: photo collage + text, alternating sides ---------- */
+
+.category-chapter__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.category-collage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.category-collage__primary {
+  aspect-ratio: 4 / 5;
+}
+
+.category-collage__secondary-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.category-collage__secondary {
+  aspect-ratio: 1 / 1;
+}
+
+.category-collage__secondary--full {
+  grid-column: 1 / -1;
+  aspect-ratio: 2 / 1;
+}
+
+/* Événements' primary photo (shop signage + display cake) is a wide
+   near-square source — a portrait 4/5 crop would lose the signage, so it
+   keeps its own wider frame instead of the shared default. */
+.category-collage--evenements .category-collage__primary {
+  aspect-ratio: 3 / 2;
+}
+
+/* Same card-frame language as the Galerie tiles: dark espresso outer card,
+   thin gold border, subtle shadow, no corners/medallion — reused here for
+   every cake photo instead of the .editorial-frame corner-bracket system. */
+.cake-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 9px;
+  background: var(--brown-dark);
+  border: 1px solid var(--color-border-gold);
+  box-shadow: 0 20px 44px -26px rgba(18, 11, 7, 0.75);
+}
+
+.cake-frame .galerie-tile {
+  cursor: default;
+}
+
+/* ---------- Compact three-step ordering process: a small "concierge
+   request" module — centered heading, ornament instead of the generic
+   underline, and a hairline-framed row of steps instead of a plain grid. ---------- */
+
+.process-section .section-title::after {
+  display: none;
+}
+
+.process-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: var(--space-xl);
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-border-gold);
+  border-bottom: 1px solid var(--color-border-gold);
+}
+
+.process-columns__step {
+  padding-inline: var(--space-lg);
+  text-align: center;
+  border-left: 1px solid var(--color-border-gold);
+}
+
+.process-columns__step:first-child {
+  border-left: none;
+}
+
+.process-columns__number {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.1rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.process-columns__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-cream);
+  margin-bottom: var(--space-2xs);
+}
+
+.process-columns__text {
+  font-size: 0.9rem;
+  color: var(--text-on-dark-muted);
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+/* Closing section: real photo background (same pattern as galerie-closing) */
+
+.occasions-closing {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.occasions-closing__photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.occasions-closing__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 46%, rgba(18, 11, 7, 0.5) 0%, rgba(18, 11, 7, 0) 72%),
+    linear-gradient(180deg, rgba(18, 11, 7, 0.72) 0%, rgba(18, 11, 7, 0.86) 100%);
+}
+
+@media (max-width: 860px) {
+  .category-chapter__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .category-chapter__visual {
+    order: -1;
+  }
+
+  .process-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-block: var(--space-md);
+  }
+
+  .process-columns__step {
+    padding-inline: 0;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-left: none;
+    border-top: 1px solid var(--color-border-gold);
+  }
+
+  .process-columns__step:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 /* Inner frame: the actual clipped photo window, inset inside the card's
    padding. A second thin border here (brightening on hover/focus) reads
    as the same double-gold-border language used by .editorial-frame
@@ -2327,103 +2599,343 @@ body.galerie .page-hero__ornament {
   color: var(--text-on-cream-muted);
 }
 
-/* ---------- Contact page ---------- */
+/* ---------- Contact page: same dark Pistachio treatment as carte/galerie/occasions ---------- */
 
-.contact-cards {
+body.contact {
+  --brown-dark: #20160f;
+  --brown-deep: #120b07;
+  --cream: #f7efe3;
+  --cream-muted: #cfc2b1;
+  --gold-border: rgba(201, 164, 92, 0.35);
+}
+
+body.contact .site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: rgba(18, 11, 7, 0.68);
+  border-bottom-color: transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+body.contact .site-header.is-scrolled {
+  background: rgba(18, 11, 7, 0.94);
+  border-bottom-color: rgba(201, 164, 92, 0.18);
+}
+
+@media (min-width: 861px) {
+  body.contact .site-header__inner {
+    position: relative;
+  }
+
+  body.contact .site-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 860px) {
+  body.contact .site-header__actions {
+    margin-top: 0;
+  }
+}
+
+body.contact .page-hero {
+  padding-block: clamp(9rem, 13vw, 11.5rem) clamp(5rem, 8vw, 7rem);
+}
+
+body.contact .page-hero__bg {
+  background: none;
+}
+
+body.contact .page-hero__bg::after {
+  display: none;
+}
+
+body.contact .page-hero::before {
+  display: none;
+}
+
+body.contact .page-hero__title::after {
+  display: none;
+}
+
+body.contact .page-hero__subtitle {
+  max-width: 46ch;
+  margin-top: var(--space-lg);
+}
+
+body.contact .page-hero__ornament {
+  margin-top: var(--space-xl);
+}
+
+.contact-hero__scrim {
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 40%, rgba(18, 11, 7, 0.6) 0%, rgba(18, 11, 7, 0.18) 70%),
+    linear-gradient(180deg, rgba(18, 11, 7, 0.66) 0%, rgba(18, 11, 7, 0.5) 32%, rgba(18, 11, 7, 0.88) 100%);
+}
+
+/* ---------- Three-panel information bar, at the foot of the hero ---------- */
+
+.contact-panels {
+  background: linear-gradient(180deg, var(--brown-dark) 0%, var(--brown-deep) 100%);
+}
+
+.contact-panels__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding-block: var(--space-xl);
+}
+
+.contact-panel {
+  padding-inline: var(--space-lg);
+  text-align: center;
+  border-left: 1px solid var(--color-border-gold);
+}
+
+.contact-panel:first-child {
+  border-left: none;
+}
+
+.contact-panel__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-panel__text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-cream);
+  line-height: 1.5;
+}
+
+.contact-panel__link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--color-gold);
+  border-bottom: 1px solid var(--color-border-gold);
+  padding-bottom: 2px;
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.contact-panel__link:hover {
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+.contact-panel__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+/* ---------- Cake-order section: editorial photo + Netlify form ---------- */
+
+.order-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-2xl);
+  align-items: start;
+  margin-top: var(--space-lg);
+}
+
+.order-layout__visual {
+  aspect-ratio: 4 / 5;
+  position: sticky;
+  top: calc(78px + var(--space-lg));
+}
+
+.order-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
 }
 
-.contact-card {
-  background: linear-gradient(165deg, #fffdf9, var(--color-cream-soft));
+.order-form__field {
+  margin-bottom: var(--space-md);
+}
+
+.order-form__field label {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+  margin-bottom: 0.5rem;
+}
+
+.order-form__field input,
+.order-form__field select,
+.order-form__field textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-cream);
+  background: rgba(247, 239, 227, 0.04);
   border: 1px solid var(--color-border-gold);
-  border-left: 3px solid var(--color-gold);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  box-shadow: 0 24px 48px -34px rgba(28, 22, 17, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
 }
 
-.contact-card__icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--color-cream-soft);
-  color: var(--color-caramel);
-  margin-bottom: var(--space-sm);
-  font-size: 1.1rem;
+.order-form__field select {
+  cursor: pointer;
 }
 
-.contact-card__title {
-  font-size: 1.15rem;
-  margin-bottom: var(--space-2xs);
+.order-form__field select option {
+  color: var(--color-espresso);
 }
 
-.contact-card__text {
-  color: var(--text-on-cream-muted);
-  font-size: 0.92rem;
+.order-form__field textarea {
+  resize: vertical;
+  min-height: 6.5rem;
 }
 
-.contact-layout {
+.order-form__field input::placeholder,
+.order-form__field textarea::placeholder {
+  color: var(--text-on-dark-muted);
+}
+
+.order-form__field input:focus-visible,
+.order-form__field select:focus-visible,
+.order-form__field textarea:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.order-form__submit {
+  margin-top: var(--space-sm);
+}
+
+.order-form__note {
+  margin-top: var(--space-md);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-on-dark-muted);
+  max-width: 52ch;
+}
+
+/* ---------- Map section: verified address + safe "open in Google Maps" card ---------- */
+
+.map-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-2xl);
-  align-items: start;
+  align-items: center;
 }
 
-.contact-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
-}
-
-.contact-gallery__item {
+.map-card {
   aspect-ratio: 4 / 3;
-}
-
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-top: var(--space-md);
-}
-
-.services-list li {
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  padding: 0.45rem 1rem;
+  padding: 9px;
+  background: var(--brown-dark);
   border: 1px solid var(--color-border-gold);
-  border-radius: 999px;
-  color: var(--text-on-cream-muted);
+  box-shadow: 0 20px 44px -26px rgba(18, 11, 7, 0.75);
 }
 
-.map-placeholder {
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-gold);
-  background:
-    linear-gradient(0deg, rgba(28,22,17,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28,22,17,0.06) 1px, transparent 1px),
-    linear-gradient(160deg, var(--color-cream-soft), var(--color-cream));
-  background-size: 32px 32px, 32px 32px, 100% 100%;
+.map-card__inner {
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-xs);
+  border: 1px solid var(--color-border-gold);
   text-align: center;
-  color: var(--text-on-cream-muted);
-  font-size: 0.85rem;
-  padding: var(--space-md);
-  position: relative;
+  padding: var(--space-lg);
+  background:
+    linear-gradient(0deg, rgba(215, 194, 151, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215, 194, 151, 0.05) 1px, transparent 1px),
+    linear-gradient(160deg, var(--brown-dark), var(--brown-deep));
+  background-size: 32px 32px, 32px 32px, 100% 100%;
 }
 
-.map-placeholder::before {
-  content: "\1F4CD";
+.map-card__pin {
   font-size: 1.8rem;
-  display: block;
-  margin-bottom: var(--space-xs);
+}
+
+.map-card__text {
+  color: var(--text-on-dark-muted);
+  font-size: 0.88rem;
+  max-width: 26ch;
+}
+
+.map-address {
+  font-style: normal;
+  color: var(--text-on-dark-muted);
+  margin-top: var(--space-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Closing section: real photo background ---------- */
+
+.contact-closing {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.contact-closing__photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-closing__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 46%, rgba(18, 11, 7, 0.5) 0%, rgba(18, 11, 7, 0) 72%),
+    linear-gradient(180deg, rgba(18, 11, 7, 0.72) 0%, rgba(18, 11, 7, 0.86) 100%);
+}
+
+@media (max-width: 960px) {
+  .order-layout,
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-layout__visual {
+    position: static;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 860px) {
+  .contact-panels__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-block: var(--space-md);
+  }
+
+  .contact-panel {
+    padding-inline: 0;
+    padding-block: var(--space-md);
+    border-left: none;
+    border-top: 1px solid var(--color-border-gold);
+  }
+
+  .contact-panel:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .order-form__row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Responsive ---------- */
@@ -2433,7 +2945,6 @@ body.galerie .page-hero__ornament {
   .signature__layout,
   .menu-row,
   .editorial-row,
-  .contact-layout,
   .reviews-layout {
     grid-template-columns: 1fr;
   }
@@ -2465,10 +2976,6 @@ body.galerie .page-hero__ornament {
     text-align: left;
   }
 
-  .contact-cards {
-    grid-template-columns: 1fr;
-  }
-
   .menu-items {
     grid-template-columns: 1fr;
   }
@@ -2483,10 +2990,6 @@ body.galerie .page-hero__ornament {
     grid-template-columns: 1fr;
     max-width: 420px;
     margin-inline: auto;
-  }
-
-  .contact-gallery {
-    grid-template-columns: 1fr;
   }
 
   .editorial-grid {
