@@ -145,6 +145,77 @@
     }
   }
 
+  /* Galerie page: simple accessible lightbox — click a tile to view it
+     larger, close via the close button, Escape, or clicking the backdrop. */
+  function initGalerieLightbox() {
+    var tiles = document.querySelectorAll(".galerie-tile");
+    var lightbox = document.getElementById("lightbox");
+    if (!tiles.length || !lightbox) return;
+
+    var img = lightbox.querySelector(".lightbox__img");
+    var caption = lightbox.querySelector(".lightbox__caption");
+    var closeBtn = lightbox.querySelector(".lightbox__close");
+    var lastTrigger = null;
+
+    function open(tile) {
+      var tileImg = tile.querySelector("img");
+      lastTrigger = tile;
+      img.src = tileImg.src;
+      img.alt = tileImg.alt || "";
+      caption.textContent = tile.getAttribute("data-caption") || "";
+      lightbox.hidden = false;
+      closeBtn.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      img.src = "";
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    tiles.forEach(function (tile) {
+      tile.addEventListener("click", function () {
+        open(tile);
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !lightbox.hidden) close();
+    });
+  }
+
+  /* Contact page: cake-order form — block past dates in the native picker
+     and reject a hand-typed past date on submit. */
+  function initOrderFormDateGuard() {
+    var dateInput = document.getElementById("of-date");
+    if (!dateInput) return;
+
+    var today = new Date();
+    var iso = today.getFullYear() + "-" +
+      String(today.getMonth() + 1).padStart(2, "0") + "-" +
+      String(today.getDate()).padStart(2, "0");
+    dateInput.setAttribute("min", iso);
+
+    function validate() {
+      if (dateInput.value && dateInput.value < iso) {
+        dateInput.setCustomValidity("Veuillez choisir une date à partir d'aujourd'hui.");
+      } else {
+        dateInput.setCustomValidity("");
+      }
+    }
+
+    dateInput.addEventListener("input", validate);
+    dateInput.addEventListener("change", validate);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNavToggle();
     initActiveNavLink();
@@ -152,5 +223,7 @@
     initHeaderScrollState();
     initMenuDeepLinks();
     initMenuControls();
+    initGalerieLightbox();
+    initOrderFormDateGuard();
   });
 })();

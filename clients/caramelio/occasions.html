@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Occasions &amp; gâteaux sur mesure — Caramelio</title>
-  <meta name="description" content="Gâteaux de mariage, créations sur mesure et gâteaux d'anniversaire pour enfants chez Caramelio. Site concept non officiel." />
+  <title>Occasions — Caramelio</title>
+  <meta name="description" content="Occasions Caramelio : gâteaux d'anniversaire, gâteaux de mariage et créations pour événements — échangez directement avec Caramelio pour préparer votre demande à Targa, Marrakech. Site concept non officiel." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="occasions">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
   <header class="site-header">
@@ -25,10 +25,11 @@
           <li><a class="site-nav__link" href="occasions.html" aria-current="page">Occasions</a></li>
           <li><a class="site-nav__link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="site-header__actions">
-          <a class="btn btn-outline-gold" href="contact.html">Itinéraire</a>
-        </div>
       </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn-outline-gold" href="https://maps.app.goo.gl/qix5PMnD1qW1fJyQ9" target="_blank" rel="noopener noreferrer">Itinéraire</a>
+      </div>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir/fermer le menu de navigation">
         <span class="nav-toggle__bar"></span>
@@ -40,103 +41,247 @@
 
   <main id="main">
     <section class="page-hero">
-      <img class="page-hero__photo" src="assets/images/cake-display-01.jpg" width="1206" height="1198" alt="" aria-hidden="true" />
+      <img class="page-hero__photo" src="assets/images/wedding-cake-02.jpg" width="1029" height="1280" style="object-position: center 40%;" alt="" aria-hidden="true" />
       <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__scrim" aria-hidden="true"></div>
       <div class="container">
-        <p class="page-hero__eyebrow">Targa · Marrakech</p>
-        <h1 class="page-hero__title">Gâteaux sur mesure</h1>
-        <p class="page-hero__subtitle">Mariages, anniversaires et moments spéciaux — des créations pâtissières imaginées avec Caramelio.</p>
+        <p class="page-hero__eyebrow">Occasions</p>
+        <h1 class="page-hero__title">Vos moments, signés Caramelio.</h1>
+        <p class="page-hero__subtitle">Anniversaires, mariages et événements — échangez directement avec Caramelio pour imaginer une création adaptée à votre occasion.</p>
+        <div class="page-hero__ornament" aria-hidden="true">
+          <svg class="ornament-mark" width="180" height="24" viewBox="0 0 180 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12 H62" stroke="currentColor" stroke-width="1" />
+            <path d="M62 12 C68 4, 76 4, 82 12 C86 17.5, 91 19.5, 96 19.5" stroke="currentColor" stroke-width="1" fill="none" />
+            <path d="M84 19.5 C89 19.5, 94 17.5, 98 12 C104 4, 112 4, 118 12" stroke="currentColor" stroke-width="1" fill="none" />
+            <circle cx="90" cy="12" r="3" fill="currentColor" />
+            <path d="M118 12 H180" stroke="currentColor" stroke-width="1" />
+          </svg>
+        </div>
       </div>
     </section>
 
-    <section class="section--tight">
+    <!-- ============ CRÉATIONS SUR COMMANDE (centered intro) ============ -->
+    <section class="section--tight section--dark occasions-section" aria-labelledby="commande-heading">
       <div class="container">
         <div class="section-heading section-heading--center">
-          <p class="eyebrow">Sur mesure</p>
-          <h2 class="section-title">Une pièce pour chaque occasion</h2>
-          <p class="section-subtitle" style="margin-inline:auto;">Gâteaux d'occasion, anniversaires, célébrations et commandes spéciales — chaque projet est discuté directement avec l'établissement.</p>
-          <p class="section-note">Tarifs sur devis — contactez Caramelio pour discuter de votre projet.</p>
+          <p class="eyebrow">Créations sur commande</p>
+          <h2 class="section-title" id="commande-heading">Un gâteau pour chaque occasion.</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">Caramelio réalise des créations pour les anniversaires, les mariages et les événements. Présentez votre demande, la date prévue et vos préférences directement à l'équipe.</p>
+          <p class="section-note">Les possibilités, les détails et la disponibilité sont confirmés avec Caramelio.</p>
+        </div>
+        <div class="hero__actions" style="justify-content: center;">
+          <a class="btn btn-outline-gold" href="contact.html">Présenter ma demande</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- ============ ANNIVERSAIRES ============ -->
+    <section class="section section--dark occasions-section" aria-labelledby="anniversaires-heading">
       <div class="container">
-        <div class="editorial-grid">
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-01.jpg" width="1038" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio, pièce montée florale" />
-            <figcaption><span>Mariage</span>Pièce montée florale</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-02.jpg" width="1029" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio à trois étages" />
-            <figcaption><span>Mariage</span>Trois étages, finition florale</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-03.jpg" width="1033" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio, décor élégant" />
-            <figcaption><span>Mariage</span>Décor élégant</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-04.jpg" width="1024" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio, initiales personnalisées" />
-            <figcaption><span>Mariage</span>Initiales personnalisées</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/wedding-cake-05.jpg" width="880" height="1280" loading="lazy" alt="Gâteau de mariage Caramelio, structure géométrique" />
-            <figcaption><span>Mariage</span>Structure géométrique</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/custom-cake-01.jpg" width="1206" height="1198" loading="lazy" alt="Gâteau personnalisé Caramelio, décor humoristique" />
-            <figcaption><span>Sur mesure</span>Création personnalisée</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/custom-cake-02.jpg" width="966" height="1280" loading="lazy" alt="Gâteau personnalisé Caramelio, thème doré" />
-            <figcaption><span>Sur mesure</span>Thème sur demande</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/kids-cake-01.jpg" width="1063" height="1280" loading="lazy" alt="Gâteau d'anniversaire enfant Caramelio, thème coloré" />
-            <figcaption><span>Enfants</span>Thème d'anniversaire</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/kids-cake-03.jpg" width="975" height="1280" loading="lazy" alt="Gâteau d'anniversaire enfant Caramelio, décor personnalisé" />
-            <figcaption><span>Enfants</span>Décor personnalisé</figcaption>
-          </figure>
-          <figure class="editorial-frame">
-            <img class="cover-img" src="assets/images/kids-cake-02.jpg" width="965" height="1280" loading="lazy" alt="Gâteau d'anniversaire enfant Caramelio, décor Barbie" />
-            <figcaption><span>Enfants</span>Thème sur demande</figcaption>
-          </figure>
+        <div class="category-chapter__layout">
+          <div class="category-chapter__visual">
+            <div class="category-collage">
+              <div class="category-collage__primary">
+                <figure class="cake-frame">
+                  <div class="galerie-tile">
+                    <img src="assets/images/custom-cake-02.jpg" width="966" height="1280" loading="lazy" style="object-position: center 42%;" alt="Gâteau à étages ivoire et or « Queen Houda », couronne et fleurs, pour un anniversaire" />
+                  </div>
+                  <figcaption class="galerie-caption">Anniversaire</figcaption>
+                </figure>
+              </div>
+              <div class="category-collage__secondary-row">
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/custom-cake-01.jpg" width="1206" height="1198" loading="lazy" style="object-position: center 42%;" alt="Gâteau personnalisé « Big Boss » pour un anniversaire" />
+                    </div>
+                  </figure>
+                </div>
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/kids-cake-01.jpg" width="1063" height="1280" loading="lazy" style="object-position: center 58%;" alt="Gâteau d'anniversaire thème Fortnite pour enfant" />
+                    </div>
+                  </figure>
+                </div>
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/kids-cake-02.jpg" width="965" height="1280" loading="lazy" style="object-position: center 45%;" alt="Gâteau d'anniversaire thème Barbie pour enfant" />
+                    </div>
+                  </figure>
+                </div>
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/kids-cake-03.jpg" width="975" height="1280" loading="lazy" style="object-position: center 38%;" alt="Gâteau d'anniversaire à deux étages thème princesse pour un premier anniversaire" />
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-chapter__text">
+            <p class="eyebrow">Anniversaires</p>
+            <h2 class="section-title" id="anniversaires-heading">Gâteaux d'anniversaire</h2>
+            <p class="section-subtitle">Des créations pour célébrer un anniversaire, pensées selon l'occasion, les préférences et le nombre de personnes.</p>
+            <div class="hero__actions">
+              <a class="btn btn-outline-gold" href="contact.html">Demander un gâteau d'anniversaire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARIAGES ============ -->
+    <section class="section section--dark occasions-section" aria-labelledby="mariages-heading">
+      <div class="container">
+        <div class="category-chapter__layout">
+          <div class="category-chapter__text">
+            <p class="eyebrow">Mariages</p>
+            <h2 class="section-title" id="mariages-heading">Gâteaux de mariage</h2>
+            <p class="section-subtitle">Pièces montées et créations élégantes pour accompagner une célébration de mariage.</p>
+            <div class="hero__actions">
+              <a class="btn btn-outline-gold" href="contact.html">Parler de notre mariage</a>
+            </div>
+          </div>
+          <div class="category-chapter__visual">
+            <div class="category-collage">
+              <div class="category-collage__primary">
+                <figure class="cake-frame">
+                  <div class="galerie-tile">
+                    <img src="assets/images/wedding-cake-01.jpg" width="1038" height="1280" loading="lazy" style="object-position: center 46%;" alt="Pièce montée florale à quatre étages avec figurine des mariés, pour un mariage" />
+                  </div>
+                  <figcaption class="galerie-caption">Mariage</figcaption>
+                </figure>
+              </div>
+              <div class="category-collage__secondary-row">
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/wedding-cake-03.jpg" width="1033" height="1280" loading="lazy" style="object-position: center 32%;" alt="Pièce montée florale ivoire et verdure pour un mariage" />
+                    </div>
+                  </figure>
+                </div>
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/wedding-cake-04.jpg" width="1024" height="1280" loading="lazy" style="object-position: center 38%;" alt="Pièce montée à roses blanches et strass pour un mariage" />
+                    </div>
+                  </figure>
+                </div>
+                <div class="category-collage__secondary">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/wedding-cake-05.jpg" width="880" height="1280" loading="lazy" style="object-position: center 30%;" alt="Pièce montée florale avec monogramme des mariés" />
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÉVÉNEMENTS ============ -->
+    <section class="section section--dark occasions-section" aria-labelledby="evenements-heading">
+      <div class="container">
+        <div class="category-chapter__layout">
+          <div class="category-chapter__visual">
+            <div class="category-collage category-collage--evenements">
+              <div class="category-collage__primary">
+                <figure class="cake-frame">
+                  <div class="galerie-tile">
+                    <img src="assets/images/cake-display-01.jpg" width="1206" height="1198" loading="lazy" style="object-position: center 42%;" alt="Présentation d'une pièce montée à l'enseigne Caramelio" />
+                  </div>
+                  <figcaption class="galerie-caption">Événement</figcaption>
+                </figure>
+              </div>
+              <div class="category-collage__secondary-row">
+                <div class="category-collage__secondary category-collage__secondary--full">
+                  <figure class="cake-frame">
+                    <div class="galerie-tile">
+                      <img src="assets/images/wedding-cake-02.jpg" width="1029" height="1280" loading="lazy" style="object-position: center 25%;" alt="Pièce montée dorée avec médaillon monogrammé, pour un événement" />
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category-chapter__text">
+            <p class="eyebrow">Événements</p>
+            <h2 class="section-title" id="evenements-heading">Créations pour événements</h2>
+            <p class="section-subtitle">Des gâteaux et compositions à discuter avec l'équipe pour vos réceptions, célébrations et événements.</p>
+            <div class="hero__actions">
+              <a class="btn btn-outline-gold" href="contact.html">Présenter mon événement</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VOTRE DEMANDE (compact 3-step process) ============ -->
+    <section class="section--tight section--dark occasions-section process-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Votre demande</p>
+          <h2 class="section-title" id="process-heading">Comment préparer votre demande.</h2>
+          <div class="frame-medallion" aria-hidden="true">
+            <span class="frame-medallion__dot"></span>
+          </div>
         </div>
 
-        <div class="menu-cta">
-          <h2 class="section-title">Un projet de gâteau sur mesure ?</h2>
-          <p class="section-subtitle" style="margin-inline:auto;">Décrivez votre occasion à Caramelio par téléphone pour discuter du thème, des délais et du tarif.</p>
-          <div class="hero__actions" style="justify-content:center; margin-top: var(--space-md);">
-            <a class="btn btn-primary" href="tel:+212524490595">Appeler Caramelio</a>
-            <a class="btn btn-outline" href="contact.html">Voir les coordonnées</a>
+        <div class="process-columns">
+          <div class="process-columns__step">
+            <span class="process-columns__number">01</span>
+            <h3 class="process-columns__title">L'occasion</h3>
+            <p class="process-columns__text">Indiquez s'il s'agit d'un anniversaire, d'un mariage ou d'un événement.</p>
           </div>
+
+          <div class="process-columns__step">
+            <span class="process-columns__number">02</span>
+            <h3 class="process-columns__title">Les détails</h3>
+            <p class="process-columns__text">Précisez la date, le nombre de personnes et vos préférences.</p>
+          </div>
+
+          <div class="process-columns__step">
+            <span class="process-columns__number">03</span>
+            <h3 class="process-columns__title">La confirmation</h3>
+            <p class="process-columns__text">Caramelio vous confirme directement les possibilités et les détails.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARLONS DE VOTRE OCCASION (closing) ============ -->
+    <section class="section section--tight section--dark occasions-closing" aria-labelledby="occasions-closing-heading">
+      <img class="occasions-closing__photo" src="assets/images/interior-lounge-01.jpg" width="818" height="1280" alt="" aria-hidden="true" />
+      <div class="occasions-closing__scrim" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Parlons de votre occasion</p>
+          <h2 class="section-title" id="occasions-closing-heading">Une création à préparer ?</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">Contactez Caramelio pour présenter votre anniversaire, votre mariage ou votre événement.</p>
+        </div>
+        <div class="hero__actions" style="justify-content: center;">
+          <a class="btn btn-outline-gold" href="contact.html">Nous contacter</a>
+          <a class="btn btn-outline-inverse" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <video class="site-footer__media" autoplay muted loop playsinline preload="metadata" poster="assets/images/villa-ambience-poster.jpg" aria-hidden="true">
-      <source src="assets/videos/villa-ambience-01.mp4" type="video/mp4" />
-    </video>
-    <img class="site-footer__media site-footer__poster-fallback" src="assets/images/villa-ambience-poster.jpg" width="560" height="848" alt="" aria-hidden="true" loading="lazy" />
-    <div class="site-footer__media-scrim" aria-hidden="true"></div>
     <div class="site-footer__bg" aria-hidden="true"></div>
-    <div class="site-footer__statement">
-      <p>Une escale élégante à Targa, entre pâtisserie et art de vivre.</p>
-    </div>
-    <div class="container site-footer__top">
-      <div class="site-footer__brand-block">
-        <span class="site-header__wordmark">Caramelio</span>
-        <p class="site-footer__tagline">Café · Pâtisserie · Breakfast — une adresse villa à Targa, Marrakech.</p>
-      </div>
 
-      <div>
-        <p class="site-footer__heading">Explorer</p>
-        <ul class="site-footer__list">
+    <div class="container site-footer__giant-wrap">
+      <span class="site-footer__giant">Caramelio</span>
+    </div>
+
+    <div class="container site-footer__cols">
+      <div class="site-footer__col">
+        <ul class="site-footer__nav-list">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="carte.html">Carte</a></li>
           <li><a href="galerie.html">Galerie</a></li>
@@ -145,37 +290,22 @@
         </ul>
       </div>
 
-      <div>
+      <div class="site-footer__col">
         <p class="site-footer__heading">Nous trouver</p>
-        <ul class="site-footer__list">
-          <li><address>JXX2+63R<br />Targa, Marrakech</address></li>
-          <li><a href="tel:+212524490595">05 24 49 05 95</a></li>
-          <li><a href="#" aria-label="Commander sur Glovo (lien à remplacer par l'URL réelle)">Commander sur Glovo</a></li>
-        </ul>
+        <address class="site-footer__address">JXX2+63R<br />Targa, Marrakech</address>
+        <a class="site-footer__phone" href="tel:+212524490595">05 24 49 05 95</a>
+        <a class="site-footer__insta" href="https://www.instagram.com/carameliotarga/?hl=fr" target="_blank" rel="noopener noreferrer">@carameliotarga</a>
       </div>
 
-      <div>
-        <p class="site-footer__heading">Horaires</p>
-        <ul class="site-footer__list">
-          <li>Ouvert jusqu'à 23:00</li>
-          <li>Horaires indicatifs — à confirmer</li>
-        </ul>
-        <p class="site-footer__heading" style="margin-top: var(--space-md);">Suivre</p>
-        <ul class="site-footer__list">
-          <li><a href="#" aria-label="Instagram (lien de démonstration)">Instagram</a></li>
-          <li><a href="#" aria-label="Facebook (lien de démonstration)">Facebook</a></li>
-        </ul>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Caramelio</p>
+        <p class="site-footer__editorial">Pâtisserie raffinée.<br />Ambiance élégante.<br />Saveurs généreuses.</p>
       </div>
     </div>
 
-    <p class="site-footer__disclaimer">Concept de site web proposé pour Caramelio — non officiel.</p>
-
-    <div class="container site-footer__bottom">
-      <span>&copy; 2026 Caramelio — Proposition Yahya Studio.</span>
-      <div class="site-footer__legal">
-        <a href="contact.html">Itinéraire</a>
-        <a href="tel:+212524490595">Appeler</a>
-      </div>
+    <div class="container site-footer__bottom-row">
+      <span>Ouvert jusqu'à 23:00</span>
+      <span>Concept de site web proposé pour Caramelio — non officiel.</span>
     </div>
   </footer>
 
